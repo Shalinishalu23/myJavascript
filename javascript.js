@@ -4,6 +4,7 @@ function add() {
   console.log("add fn called");
 }
 add()
+
 // let val;
 // const pi = 3.14;
 // function outest(c) {
