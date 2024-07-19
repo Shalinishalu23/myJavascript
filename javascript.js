@@ -1,9 +1,9 @@
-var a = 7;
-console.log("7", 7);
-function add() {
-  console.log("add fn called");
-}
-add()
+// var a = 7;
+// console.log("7", 7);
+// function add() {
+//   console.log("add fn called");
+// }
+// add()
 // let val;
 // const pi = 3.14;
 // function outest(c) {
@@ -52,6 +52,34 @@ add()
 //   console.log("arg", arg1, arg2);
 // }
 // =======================
+
+// configData = [
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+// ];
+
+// let id1 = configData.map(data => data.id)
+// let id2 = configData.filter(data => data.id==2)
+// let id3= configData.find(data => data.id==2)
+// let id4 = configData.some(data => data.id==2)
+// let id5= configData.every(data => data.id==2)
+// let id6= configData.reduce((acc, pilot) => acc + pilot.id, 0)
+// console.log('id1: ', id1)
+// console.log('id2: ', id2)
+// console.log('id3: ', id3);
+// console.log('id4: ', id4);
+// console.log('id5: ', id5);
+// console.log('id6: ', id6);
+
+
 
 // configData = [
 //   {
@@ -391,4 +419,148 @@ add()
 // let multi = multiply(2)
 // multi(3)
 
+//call back
+
+// function x(y){
+//   console.log('inside x')
+//   y()
+// }
+
+// x(function y(){
+//   console.log('inside y');
+// })
+
+//promise 
+
+// creating a promise
+
+// function promiseCreation(name){
+//   const pr = new Promise(
+//     function(resolve, reject){
+//         let test = {
+//           status: 200,
+//           data: 'https://api.github.com/users/'+ name,
+
+//         }
+//         if(test.status===200){
+//           resolve(test.data)
+//         } else{
+//           const err = new Error("error in api")
+//           reject(err)
+//         }
+//     }
+//   )
+//   return pr
+// }
+
+// // consuming of the promise
+// const prResult = promiseCreation('shalinishalu23')
+// console.log('prResult: ', prResult)
+// prResult
+// .then(function(data){
+//   console.log('data: ', data)
+//   fetch(data).then(function(test){
+//     console.log('test: ', test)
+//   })
+// })
+// .then(console.log('call another fn'))
+// .catch(function(err){
+// console.log(err.message);
+// })
+
+
+// async await
+// always return promise
+
+// const p1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('p1 resolve')
+//   }, 20000)
+// })
+// const p2 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve('p2 resolve')
+//   }, 30000)
+// })
+
+// // with async await 
+// async function getData() {
+//   try {
+//     console.log('log1');
+//     await p1.then(res => console.log(res))
+//     console.log('log2');
+//     await p2.then(res => console.log(res))
+//     console.log('log3');
+//   }
+//   catch (err) {
+//     console.log('err: ', err);
+//   }
+// }
+
+// // without async await , its just promise
+// function getData() {
+//   console.log('log1');
+//   p1.then(res => console.log(res))
+//   console.log('log2');
+//   p2.then(res => console.log(res))
+//   console.log('log3');
+// }
+// getData()
+
 // debouncing
+// limit the rate of the api call
+
+function debounce(func, delay) {
+    console.log('debounce: ')
+    let timeoutId;
+
+    return function() {
+        const context = this;
+        const args = arguments;
+
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            func.apply(context, args);
+        }, delay);
+    };
+}
+
+function apiCall() {
+    console.log('API called');
+}
+
+const debouncedApiCall = debounce(apiCall, 2000);
+
+// throttling
+function throttle(func, delay) {
+    let lastExecTime = 0;
+    let timeoutId;
+
+    return function() {
+        const context = this;
+        const args = arguments;
+        const currentTime = new Date().getTime();
+
+        if (currentTime - lastExecTime < delay) {
+            // Delay has not passed since last execution, throttle the function call
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                lastExecTime = currentTime;
+                func.apply(context, args);
+            }, delay);
+        } else {
+            // Delay has passed, execute the function immediately
+            lastExecTime = currentTime;
+            func.apply(context, args);
+        }
+    };
+}
+
+function logScroll() {
+    console.log('Scrolled');
+}
+
+const throttledScroll = throttle(logScroll, 200);
+
+// Example usage: Throttled scroll event listener
+// window.addEventListener('scroll', throttledScroll);
