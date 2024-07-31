@@ -510,57 +510,59 @@
 // debouncing
 // limit the rate of the api call
 
-function debounce(func, delay) {
-    console.log('debounce: ')
-    let timeoutId;
+// function debounce(func, delay) {
+//     console.log('debounce: ')
+//     let timeoutId;
 
-    return function() {
-        const context = this;
-        const args = arguments;
+//     return function() {
+//         const context = this;
+//         const args = arguments;
 
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-            func.apply(context, args);
-        }, delay);
-    };
-}
+//         clearTimeout(timeoutId);
+//         timeoutId = setTimeout(() => {
+//             console.log('timeoutId: ', timeoutId)
+//             func.apply(context, args);
+//         }, delay);
+//     };
+// }
 
-function apiCall() {
-    console.log('API called');
-}
+// function apiCall() {
+//     console.log('API called');
+// }
 
-const debouncedApiCall = debounce(apiCall, 2000);
+// const debouncedApiCall = debounce(apiCall, 2000);
+
 
 // throttling
-function throttle(func, delay) {
-    let lastExecTime = 0;
-    let timeoutId;
+// function throttle(func, delay) {
+//     let lastExecTime = 0;
+//     let timeoutId;
 
-    return function() {
-        const context = this;
-        const args = arguments;
-        const currentTime = new Date().getTime();
+//     return function() {
+//         const context = this;
+//         const args = arguments;
+//         const currentTime = new Date().getTime();
 
-        if (currentTime - lastExecTime < delay) {
-            // Delay has not passed since last execution, throttle the function call
-            clearTimeout(timeoutId);
-            timeoutId = setTimeout(() => {
-                lastExecTime = currentTime;
-                func.apply(context, args);
-            }, delay);
-        } else {
-            // Delay has passed, execute the function immediately
-            lastExecTime = currentTime;
-            func.apply(context, args);
-        }
-    };
-}
+//         if (currentTime - lastExecTime < delay) {
+//             // Delay has not passed since last execution, throttle the function call
+//             clearTimeout(timeoutId);
+//             timeoutId = setTimeout(() => {
+//                 lastExecTime = currentTime;
+//                 func.apply(context, args);
+//             }, delay);
+//         } else {
+//             // Delay has passed, execute the function immediately
+//             lastExecTime = currentTime;
+//             func.apply(context, args);
+//         }
+//     };
+// }
 
-function logScroll() {
-    console.log('Scrolled');
-}
+// function logScroll() {
+//     console.log('Scrolled');
+// }
 
-const throttledScroll = throttle(logScroll, 200);
+// const throttledScroll = throttle(logScroll, 2000);
 
 // Example usage: Throttled scroll event listener
 // window.addEventListener('scroll', throttledScroll);
