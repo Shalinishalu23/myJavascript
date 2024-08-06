@@ -1,0 +1,5 @@
+// const map1= new Map()
+// map1.set('name','shalini')
+// map1.set('age', '30')
+// console.log('map1: ', map1.get('age'))
+// console.log('map1: ', map1.has('age'))

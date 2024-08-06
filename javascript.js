@@ -79,8 +79,6 @@
 // console.log('id5: ', id5);
 // console.log('id6: ', id6);
 
-
-
 // configData = [
 //   {
 //     configDesc: "SMTP mail server(IP address)",
@@ -188,6 +186,9 @@
 
 // const listHasPilotss = configData.every((data) => data.id == 2);
 // console.log('every', listHasPilotss)
+
+// const id1 = configData.findIndex(item => item.id ===2 )
+// console.log('id1: ', id1);
 
 // chapter 2
 // var n = 2;
@@ -430,7 +431,7 @@
 //   console.log('inside y');
 // })
 
-//promise 
+//promise
 
 // creating a promise
 
@@ -468,7 +469,6 @@
 // console.log(err.message);
 // })
 
-
 // async await
 // always return promise
 
@@ -483,7 +483,7 @@
 //   }, 30000)
 // })
 
-// // with async await 
+// // with async await
 // async function getData() {
 //   try {
 //     console.log('log1');
@@ -532,7 +532,6 @@
 
 // const debouncedApiCall = debounce(apiCall, 2000);
 
-
 // throttling
 // function throttle(func, delay) {
 //     let lastExecTime = 0;
@@ -566,3 +565,70 @@
 
 // Example usage: Throttled scroll event listener
 // window.addEventListener('scroll', throttledScroll);
+
+// remove duplicate using array from set and filter for the '' and null remove and join for the array to string
+// const str1= 'testing1'
+// const str2= 'testing2'
+// const str3= ''
+// const str4= null
+// const str5= 'testing2'
+
+// const receipent = Array.from(new Set([str1, str2,str3, str4, str5].filter(Boolean))).join(',')
+// console.log('receipent: ', receipent)
+
+// 5 => 5+4+3+2+1
+// function sum (num){
+//     let results= 0
+//     for(let i = 1 ; i<= num; i++ ){
+//         results+=i
+//     }
+//     return results
+// }
+
+// const result= sum(5)
+// const result1= sum(6)
+// console.log('result1: ', result1);
+// console.log('result: ', result)
+
+// const test = function(num){
+//     let results= 0
+//     for(let i = 1 ; i<= num; i++ ){
+//         results+=i
+//     }
+//     return results
+// }
+// console.log('test: ', test(6))
+
+// function checkPrime(num) {
+//   for (let i = 2; i <= num - 1; i++) {
+//     if (num % i == 0) {
+//         console.log('prime', num);
+//       flag = false;
+//       break;
+//     } else {
+//       console.log('not prime', num);
+//     }
+//   }
+// }
+// checkPrime(4);
+// checkPrime(5);
+
+// var person={
+//     fn:'shalini',
+//     ln:'M'
+// }
+
+// console.log('keys): ', Object.keys(person));
+// console.log('values): ', Object.values(person));
+// console.log('entries): ', Object.entries(person));
+// function even (num) {
+//     let text= ''
+//   if (num%2 == 0) {
+//     return text=num + ' even'
+// } else {
+//     return text=num + ' odd'
+//   }
+// }
+
+// var result = even(2);
+// console.log("result: ", result);
