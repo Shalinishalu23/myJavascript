@@ -124,4 +124,51 @@
 // console.log("recursiveFactorial(4): ", recursiveFactorial(4));
 // console.log("recursiveFactorial(5): ", recursiveFactorial(5));
 
-// search- linear search and binary search
+// search- linear search ep-14 O(n)
+
+// function linearIndex(ar, target) {
+//   // // using filter
+//   let val = ar.filter((item) => item === target);
+//   console.log("hjhj", ar.indexOf(val[0]));
+//   // //   using foreach
+//   let result = -1;
+//   ar.forEach((element, ind) => {
+//     if (element === target) {
+//       return (result = ind);
+//     }
+//   });
+//   // //   using for
+//   //   for (let i = 0; i < ar.length; i++) {
+//   //     if (ar[i] === target) {
+//   //       return i;
+//   //     }
+//   //   }
+//   return result;
+// }
+// numArray = [4, 8, 6, 5];
+// console.log("findIndex", linearIndex(numArray, 6));
+// console.log("findIndex", linearIndex(numArray, 9));
+
+// search - binary search ep-16 O(logn)
+function binarySearch(arr, target){
+    let leftIndex= 0
+    let rightIndex= arr.length -1
+    while(leftIndex <= rightIndex){
+        let midIndex= Math.floor((leftIndex + rightIndex) / 2)
+        if(target === arr[midIndex]){
+            return midIndex
+        }
+        if(target < arr[midIndex]){
+            rightIndex = midIndex -1
+        }
+        if(target > arr[midIndex]){
+            leftIndex = midIndex + 1
+        }
+    }
+    return -1
+
+}
+numArray = [4, 6, 9, 11];
+console.log("findIndex", binarySearch(numArray, 6));
+console.log("findIndex", binarySearch(numArray, 9));
+
