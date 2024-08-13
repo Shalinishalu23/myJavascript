@@ -620,15 +620,21 @@
 
 // console.log('keys): ', Object.keys(person));
 // console.log('values): ', Object.values(person));
-// console.log('entries): ', Object.entries(person));
-// function even (num) {
-//     let text= ''
-//   if (num%2 == 0) {
-//     return text=num + ' even'
-// } else {
-//     return text=num + ' odd'
-//   }
-// }
+// console.log('entries): ', Object.entries(person));  // will get in array both key and value
+// console.log('assign: ', Object.assign(person)); 
 
-// var result = even(2);
-// console.log("result: ", result);
+// function reversName(name){
+//    return name.split('').reverse().join('')
+// }
+// name= ''
+// console.log('reversName(string): ', reversName('shalini'));
+
+// function time(){
+//     setInterval(()=>{
+//         var currentTime = new Date()
+//         console.log('currentTime: ', currentTime)
+//     }, 1000)
+// }
+// time()
+
+// TTD shallowClone and deepClone (json.string) and json(pass)

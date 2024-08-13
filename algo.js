@@ -1,3 +1,20 @@
+// even/odd(num%2==0)
+// prime/non prime(num%i==0)
+
+// sum of num(5) 5+4+3+2+1 (result+i)
+// factorial(5) 5*4*3*2*1(result*i)
+// fibonacci(4) [0,1,1,2,3,5,8]
+
+// powerof(2) return num > 0 && (num &(num -1)) === 0
+
+// recursive Finbonacci return recursiveFibonacci(n-1)+recursiveFibonacci(n-2)
+// recursive factorial return n * recursiveFactorial(n - 1);
+
+// binarySearch midIndex = leftIndex + rightIndex /2
+
+// sort - bubbleSort arr[i] > arr[i + 1] and temp
+// sort - quick sort(pivot) leftArray and rightArray
+
 // time complexity
 // space complexity
 // big o notation
@@ -130,6 +147,9 @@
 //   // // using filter
 //   let val = ar.filter((item) => item === target);
 //   console.log("hjhj", ar.indexOf(val[0]));
+//   // // or using filter
+//   let val = ar.find((item) => item === target);
+//   console.log("hjhj", ar.indexOf(val));
 //   // //   using foreach
 //   let result = -1;
 //   ar.forEach((element, ind) => {
@@ -149,26 +169,72 @@
 // console.log("findIndex", linearIndex(numArray, 6));
 // console.log("findIndex", linearIndex(numArray, 9));
 
-// search - binary search ep-16 O(logn)
-function binarySearch(arr, target){
-    let leftIndex= 0
-    let rightIndex= arr.length -1
-    while(leftIndex <= rightIndex){
-        let midIndex= Math.floor((leftIndex + rightIndex) / 2)
-        if(target === arr[midIndex]){
-            return midIndex
-        }
-        if(target < arr[midIndex]){
-            rightIndex = midIndex -1
-        }
-        if(target > arr[midIndex]){
-            leftIndex = midIndex + 1
-        }
-    }
-    return -1
+// // search - binary search ep-16 O(logn)
+// function binarySearch(arr, target) {
+//   let leftIndex = 0;
+//   let rightIndex = arr.length - 1;
+//   while (leftIndex <= rightIndex) {
+//     let midIndex = Math.floor((leftIndex + rightIndex) / 2);
+//     if (target === arr[midIndex]) {
+//       return midIndex;
+//     }
+//     if (target < arr[midIndex]) {
+//       rightIndex = midIndex - 1;
+//     }
+//     if (target > arr[midIndex]) {
+//       leftIndex = midIndex + 1;
+//     }
+//   }
+//   return -1;
+// }
+// numArray = [4, 6, 9, 11];
+// console.log("findIndex", binarySearch(numArray, 6));
+// console.log("findIndex", binarySearch(numArray, 9));
 
-}
-numArray = [4, 6, 9, 11];
-console.log("findIndex", binarySearch(numArray, 6));
-console.log("findIndex", binarySearch(numArray, 9));
+// // binary search recursive  ep-18 O(logn)
 
+// // bubble sort ep-21
+
+// function bubbleSort(arr) {
+//   let swapped
+//   do {
+//     swapped = false;
+//     for (let i = 0; i < arr.length - 1; i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         let temp = arr[i];
+//         arr[i] = arr[i + 1];
+//         arr[i + 1] = temp;
+//         swapped = true;
+//       }
+//     }
+//   } while (swapped);
+// }
+// arr= [-2, 8, 5, 7, 6]
+// bubbleSort(arr)
+// console.log('arr: ', arr)
+
+// insertion sort ep-23 O(n^2) // read again
+
+// quick sort ep-24(exp) and ep-25(code) O(n^2)
+
+// function quickSort(arr) {
+//     if (arr.length < 2) {
+//       return arr;
+//     }
+//   let pivot = arr[arr.length - 1];
+//   let leftArray = [];
+//   let rightArray = [];
+//   for (let i = 0; i < arr.length- 1; i++) {
+//     if (arr[i] > pivot) {
+//       rightArray.push(arr[i]);
+//     } else {
+//       leftArray.push(arr[i]);
+//     }
+//   }
+//   return [...quickSort(leftArray), pivot, ...quickSort(rightArray)];
+// }
+// arr = [7, -2, 5, -6, 4, 8, 3];
+// quickSort(arr);
+// console.log('quickSort(arr);: ', quickSort(arr))
+
+// Merge sort ep- 26(exp) ep-27(code) O(n)
