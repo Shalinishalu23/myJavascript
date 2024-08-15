@@ -238,3 +238,48 @@
 // console.log('quickSort(arr);: ', quickSort(arr))
 
 // Merge sort ep- 26(exp) ep-27(code) O(n)
+
+// cartesian ep-30 O(n^2)
+
+// function cartesianProduct(arr1, arr2) {
+//   let arr = [];
+//   for (let i = 0; i < arr1.length; i++) {
+//     for (let j = 0; j < arr2.length; j++) {
+//       arr.push([arr1[i], arr2[j]]);
+//     }
+//   }
+//   return arr;
+// // }
+// arr1 = [1, 2];
+// arr2 = [3, 4, 5];
+// // const result = cartesianProduct(arr1, arr2);
+// // console.log('result: ', result)
+// // result.forEach((item) => {
+// //   console.log("item", item);
+// // });
+// // or same prob with map solution
+// console.log('arr1.map ', arr1.flatMap(item1=>(arr2.map(item2=>([item1,item2 ])))))
+
+// staircase ep- 32  O(n)
+
+// function staircase(n){
+//     const noOfWays= [1,2]
+
+//     return noOfWays
+// }
+// console.log(' staircase(n): ',  staircase(3));
+
+// tower of hanoi ep-34 O(2^n)
+
+// function tower(n, from, to, using) {
+//   if (n === 1) {
+//     console.log(`move disk 1 from ${from} to ${to} `);
+//     return;
+//   }
+//   tower(n-1, from, using, to);
+//   console.log(`move disk ${n} from ${from} to ${to} `);
+//   tower(n-1, using, from, to);
+// }
+// console.log("tower", tower(2, "a", "b", "c"));
+// console.log("tower", tower(3, "a", "b", "c"));
+// console.log("tower", tower(4, "a", "b", "c"));

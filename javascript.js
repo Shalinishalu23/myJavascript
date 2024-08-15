@@ -621,7 +621,7 @@
 // console.log('keys): ', Object.keys(person));
 // console.log('values): ', Object.values(person));
 // console.log('entries): ', Object.entries(person));  // will get in array both key and value
-// console.log('assign: ', Object.assign(person)); 
+// console.log('assign: ', Object.assign(person));
 
 // function reversName(name){
 //    return name.split('').reverse().join('')
@@ -638,3 +638,12 @@
 // time()
 
 // TTD shallowClone and deepClone (json.string) and json(pass)
+
+// //map flatMap  map([1][2][3]) flatMap([123])
+
+// arr3 = [2,4,6,8]
+// console.log('arr', arr3.map((item)=> [item]));
+// console.log('arr', arr3.flatMap((item)=> [item]));
+// console.log('arr', arr3.flatMap((item)=> [[item]]));
+
+// algorithm techniques ep-35
