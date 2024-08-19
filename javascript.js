@@ -626,7 +626,6 @@
 // function reversName(name){
 //    return name.split('').reverse().join('')
 // }
-// name= ''
 // console.log('reversName(string): ', reversName('shalini'));
 
 // function time(){
@@ -646,4 +645,42 @@
 // console.log('arr', arr3.flatMap((item)=> [item]));
 // console.log('arr', arr3.flatMap((item)=> [[item]]));
 
-// algorithm techniques ep-35
+// arr = [1,2,3,4,5,6]
+// arr1 = [7,8,9,10]
+// arr2 = [11,12]
+
+// console.log('isArray', Array.isArray(arr));
+// console.log('toString', arr.toString());
+// console.log('[2]', arr[2]);
+// console.log('at(2)', arr.at(2));
+// console.log('join', arr.join('*'));
+// console.log('push', arr.push(5), arr);
+// console.log('pop', arr.pop(), arr);
+// console.log('shift', arr.shift(), arr);
+// console.log('unshift', arr.unshift(1), arr);
+// console.log('concat', arr.concat(arr1));
+// console.log('spread add ', [...arr  , ...arr1]);
+// console.log('concat(arr1, arr2)', arr.concat(arr1, arr2));
+// console.log('concat(11)', arr.concat(11));
+// console.log('copyWithin(2, 0);',arr.copyWithin(2, 0));
+// console.log('copyWithin(2, 0, 2);',arr.copyWithin(2, 0, 2));
+// const myArr = [[1,2],[3,4],[5,6]];
+// console.log('flat([1,2]);: ', myArr.flat())
+// console.log('flatMap(): ', arr.flatMap(x=>[x]))
+// console.log('splice()add: ', arr.splice(2,1,13)) //splice and toSplice
+// console.log('slice();: ', arr.slice(1))
+// console.log('splice()remove: ', arr.splice(1, 2)) //check
+
+// fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log('indexOf: ', fruits.indexOf("Orange"));
+// console.log('includes: ', fruits.includes('Orange'));
+// console.log('sort: ', fruits.sort());
+// console.log('toSorted: ', fruits.toSorted());
+// console.log('reverse: ', fruits.reverse());
+
+// const points = [40, 100, 1, 5, 25, 10];
+// // points.sort(function(a, b){return b-a});
+// console.log('points: ', points.sort())
+
+// let dates = new Date()
+// console.log('dates: ', dates.getSeconds())
