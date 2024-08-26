@@ -215,6 +215,19 @@
 
 // insertion sort ep-23 O(n^2) // read again
 
+// const insertion = function (arr) {
+//     for (let i = 1; i < arr.length; i++) {
+//         for (let j = i; j >= 0; j--) {
+//             if (arr[j] < arr[j - 1]) {
+//                 [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]];
+//             }
+//         }
+//     }
+//     return arr
+// }
+// arr = [8, -5, 2, 4, -8 , - 4];
+// console.log("insertion(arr): ", insertion(arr));
+
 // quick sort ep-24(exp) and ep-25(code) O(n^2)
 
 // function quickSort(arr) {
