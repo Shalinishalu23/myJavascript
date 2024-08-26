@@ -801,3 +801,21 @@
 //     console.log('a: ', a)
 // }
 // abc()
+
+// function add1(num) {
+//   return num.a++;
+// }
+// let addedNum = add1({a:7});
+// console.log("addedNum: ", addedNum);
+
+// function testing() {
+// //    console.log("before: ", a); this give errors
+//   function test() {
+//     console.log("before: ", a);
+//     var a;
+//     console.log("after: ", a);
+//   }
+//   test();
+//   return "res";
+// }
+// console.log("testing(): ", testing());
