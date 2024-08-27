@@ -27,11 +27,11 @@ class Queue {
 }
 
 
-const que = new Queue()
-console.log('que.enqueue(5): ', que.enqueue(5));
-console.log('que.enqueue(5): ', que.enqueue(7));
-console.log('que.enqueue(5): ', que.enqueue(43));
-console.log('que.enqueue(5): ', que.size());
-console.log('que.enqueue(5): ', que.peek());
-console.log('que.enqueue(5): ', que.isEmpty());
-console.log('que.enqueue(5): ', que.dequeue());
+// const que = new Queue()
+// console.log('que.enqueue(5): ', que.enqueue(5));
+// console.log('que.enqueue(5): ', que.enqueue(7));
+// console.log('que.enqueue(5): ', que.enqueue(43));
+// console.log('que.enqueue(5): ', que.size());
+// console.log('que.enqueue(5): ', que.peek());
+// console.log('que.enqueue(5): ', que.isEmpty());
+// console.log('que.enqueue(5): ', que.dequeue());
