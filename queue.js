@@ -24,6 +24,14 @@ class Queue {
     this.front++
     return ele
   }
+  search(element) {
+    for (const [key, value] of Object.entries(this.item)) {
+      if (value === element) {
+        return [key, value];
+      }
+    }
+    return "not found";
+  }
 }
 
 
