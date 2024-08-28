@@ -26,6 +26,14 @@ class Stack {
   print() {
     console.log("this.items: ", this.items);
   }
+  search(element){
+    for(const [key, value] of Object.entries(this.items) ){
+        if(value === element){
+            return {value, key: parseInt(key)}
+        }
+    }
+    return 'not found'
+  }
 }
 
 // const stack1 =new Stack()
