@@ -4,56 +4,68 @@
 // var atestArray= [2,7,11,15]
 // var atarget = 26
 
-// const atwoSum = (nums, target)=>{
-//     const map = new Map() // key = target - currentValue, value - current index
-
-//     for (let i = 0; i < nums.length; i++) {
-//       const val = nums[i]
-//       console.log('val: ', val)
-//       const difference = target - val
-//       console.log('difference: ', difference)
-
-//       if (map.has(val)) {
-//          return [map.get(val), i]
-//       }
-
-//       map.set(difference, i)
-//     }
-// }
-
-// let result = atwoSum(atestArray,atarget);
-// console.log('result', result)
-
-// const anum = [2, 3, 4, 5];
-// const atag = 9;
-
-// const result1 = atwo(anum, atag);
-// console.log('result1: ', result1);
-
-// function atwo(num, tar) {
+// var twoSum = function (arr, target) {
 //     const map = new Map();
-//     let result = null; // Initialize result variable
+//     for (let i = 0; i < arr.length; i++) {
+//       let value = arr[i];
+//       let diff = target - value;
+//       console.log("diff: ", diff);
+//       if (map.has(value)) {
+//         return [map.get(value), i];
+//       }
+//       map.set(diff, i);
+//     }
+//   };
 
-//     num.forEach((val, i) => {
-//         const diff = tar - val;
-//         if (map.has(diff)) {
-//             result = [map.get(diff), i];
-//         }
-//         map.set(val, i);
-//     });
+//   (nums = [2, 7, 9, 11, 15]), (target = 18);
+//   console.log("twoSum", twoSum(nums, target));
 
-//     return result; // Return result after iteration
-// }
+// 9 isPalindrome
 
-// leet code 2
-
-// var addTwoNumbers = function(l1, l2) {
-//     console.log('l1, l2: ', l1, l2)
-//     var result= null
-
-//     return result
-
+// var isPalindrome = function (x) {
+//   let old = x;
+//   let newValue = String(x).split("").reverse().join("");
+//   if (old === parseInt(newValue)) {
+//     return true;
+//   }
+//   return false;
 // };
-// var l1 = [2,4,3]
-// var l2 = [5,6,4]
-// console.log('addTwoNumbers: ', addTwoNumbers(l1, l2));
+// console.log("isPalindrome: ", isPalindrome('abccba'));
+
+// 14. Longest Common Prefix
+// var longestCommonPrefix = function(str) {
+//     console.log('str.length: ', str.length)
+//     if(!str.length) return ''
+//     let longestCommonPrefix = ''
+//     for(let i=0; i< str[0].length; i++) {
+//         console.log('i: ', i)
+//         let char = str[0][i]
+//         if(!char) return ''
+//         if(str.every(str => str[i] === char)) {
+//             longestCommonPrefix+=char
+//         } else break
+//     }
+//     return longestCommonPrefix
+// };
+// str = ["flower", "flow", "flight"];
+// console.log("longestCommonPrefix: ", longestCommonPrefix(str));
+
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
+
+var mergeTwoLists = function (list1, list2) {
+  const list1 = new ListNode();
+  const list2 = new ListNode();
+  list2.forEach((element) => {
+    list1.push(element);
+  });
+  return list1.sort(function (a, b) {
+    return a - b;
+  });
+};
+
+list1 = [1, 2, 3];
+list2 = [3, 4, 2];
+console.log("mergeTwoLists: ", mergeTwoLists(list1, list2));
