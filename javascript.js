@@ -684,3 +684,55 @@
 
 // let dates = new Date()
 // console.log('dates: ', dates.getSeconds())
+
+// function modifyVal(value) {
+//     value = 100;
+//    console.log(value);
+//    }
+    
+//    let num = 50;
+//    modifyVal(num);
+//    console.log(num);
+
+//    const str = "Hello World";
+// const uniqueChars = [...new Set([...str])];
+// console.log(uniqueChars);
+
+
+// deep clone
+// Deep cloning means creating a completely independent copy of an object, including all nested objects or arrays. Changes to the clone do not affect the original.
+// const original = {
+//   name: "Shalini",
+//   address: {
+//     city: "Bangalore",
+//     pin: 560001
+//   }
+// };
+
+// const deepClone = JSON.parse(JSON.stringify(original));
+
+// deepClone.address.city = "Mysore";
+
+
+// console.log("original:", original.address.city); // Bangalore
+// console.log("deepClone:", deepClone.address.city); // Mysore
+
+// testing()
+// function testing(){
+//   console.log('testing: ')
+// }
+
+// var stre = "Banglore, Mysore, Mandya";
+ 
+// //  [
+// //  {name:'Banglore', value:'Banglore'},
+// //  {name:'Mysore', value:'Mysore'}, 
+// //  {name:'Mandya', value:'Mandya'}
+// //  ]
+
+
+// const result = stre.split(',').map(a=>({
+//   name: a,
+//   value: a
+// }))
+// console.log('testing: ', result)
