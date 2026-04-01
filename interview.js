@@ -364,477 +364,6 @@ aot
 	Explain about google type autocomplete? Can we catch http previous response	
 
 
-call,apply
-===============
-function myFunc(tx1, tx2){
-return this.name + tx1;
-}
-
-var obj = {name: 'kavya', des: 'SSE'}
-myFunc.call(obj, 'text1', 'text2');
-=====================
-function myFunc(tx1, tx2){
-return this.name + tx1;
-}
-
-var obj = {name: 'kavya', des: 'SSE'}
-myFunc.apply(obj, ['text1', 'text2']);
-==========================
-spread operator/rest param
-
-this.myFunc(1, 3, 4, 5, 2)
-myFunc(...arg){
-} 
-
-rest param
-this.myFunc(1, 3, 4, 5, 2)
-myFunc(num1, num2, ...arg){
-}
-===============================
-given array -> [1, 2, 3, 4, 5]
- if input 2, expected output -> [[1,2], [3,4], [5]]
- surprised 1 sad 1
- if input 3, output -> [[1,2,3],[4,5]]
-if input 4, output -> [[1,2,3,4],[5]]
-=====================================
- ['LM2500', 'LM6000', 'X-Fleet Aero']
- 
- this.listOfData = data.data.bulletins;
-        this.listOfData = this.listOfData.map((item)=>{
-          return {
-            ...item,
-            sortOrder: 'ase'
-          }
-        })
-      });
-	  
- this.filterbulletinStatus = data.data.bulletinStatus.map(
-          (item: any) => {
-            return {
-              ...item,
-              text: item.value,
-            };
-          }
-        );
-====================================  
-var stre = "Banglore, Mysore, Mandya";
-
-stre = stre.split(',');
-stre = stre.map((item) => {
-  return {
-    item: item,
-    value: item
-  }
-});
-console.log(stre); 
-=====================================
-paths= {1: '1-Prior to start-up', 2: '2-At first'}
-updatePaths = Object.keys(paths).map((key) => {
-          return {
-            access: paths[key].split(','),
-            resources: key
-          }
-        });
-		
-=====================================	
-this.globalService.jwtToken$.next(jwtToken);
-
- public jwtToken$ = new BehaviorSubject<any>('');
-  jwtToken = this.jwtToken$.asObservable();
-
-this.globalService.jwtToken$.subscribe((data: any) => {
-      if (data) {
-        this.getToken = data;
-        console.log('get', data);
-      }
-    });
-===================================================
-/ let val;
- const pi = 3.14;
- function outest(c) {
-   console.log("c", c);
-   function outer(a) {
-     console.log("a", a);
-     function inner(b) {
-       console.log("b", a, b, c);
-     }
-     inner(8);
-   }
-   outer(6);
- }
-
- outest(7);
-
- function add (a) {
-     return function(b){
-         console.log('a  b', a , b)
-       return a + b;
-     }
-   }
-   add(3)(4)
-
- //   or
-
-   function add (a) {
-     function add1 (b){
-        console.log('a  b', a , b)
-      return a + b;
-    }
-    add1(4)
-  }
-
-  add(3)
-
- spread operator
- this.myFunc(0,1, 2, 3, 4, 5, 6);
- function myFunc(...arg) {
-   console.log("arg index", arg[5]);
-   console.log("arg", arg);
- }
-
- rest param
- function myFunc(arg1, arg2, ...arg) {
-   console.log("arg", arg1, arg2);
- }
- =======================
-
- configData = [
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 1,
-   },
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 2,
-   },
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 2,
-   },
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 1,
-   },
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 2,
-   },
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 2,
-   },
- ];
- //remove duplication
- var res = configData.filter(
-   (c, b, s) => s.findIndex((d) => d.id === c.id) === b
- );
- console.log("res", res);
- =========================
- // difference in 2 array
- // Array Object 1
- const arrayObjOne = [
-   { userId: "1", display: "Jamsheer" },
-   { userId: "2", display: "Muhammed" },
-   { userId: "3", display: "Ravi" },
-   { userId: "4", display: "Ajmal" },
-   { userId: "5", display: "Ryan" },
- ];
-
- // Array Object 2
- const arrayObjTwo = [
-   { empId: "1", display: "Jamsheer", designation: "Jr. Officer" },
-   { empId: "2", display: "Muhammed", designation: "Jr. Officer" },
-   { empId: "3", display: "Ravi", designation: "Sr. Officer" },
-   { empId: "4", display: "Ajmal", designation: "Ast. Manager" },
- ];
- // difference in array
- // const ResultArrayObjOne = arrayObjOne.filter(
- //   ({ userId: userId }) =>
- //     !arrayObjTwo.some(({ empId: empId }) => empId === userId)
- // );
- // console.log(ResultArrayObjOne);
-
- // common in Array
- var common = arrayObjOne.filter(item1 => arrayObjTwo.some(item2 => item1.userId === item2.empId)) // common
- var dif = arrayObjOne.filter(item1 => !arrayObjTwo.some(item2 => item1.userId === item2.empId)) // difference
- console.log('common', common)
- console.log('dif', dif)
-
- arrays
- let intersection = arrayObjOne.filter(x => arrayObjTwo.includes(x));
- console.log('intersection', intersection)
-
- _.intersection( arrayObjOne ,arrayObjTwo )
- console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
-
- ================================
- configData = [
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 1,
-   },
-   {
-     configDesc: "SMTP mail server(IP address)",
-     configValue: "smtpout.asia.secureserver.net",
-     id: 2,
-   },
- ];
- console.log("configData", configData);
-
- const id = configData.map((res) => res.id);
- console.log("map", id);
-
- const results = configData.reduce((acc, pilot) => acc + pilot.id, 0);
- console.log("reduce", results);
-
- const firstPilot = configData.find((data) => data.id);
- console.log('find', firstPilot)
-
- const fileSize = configData.filter((data) => data.id == 2);
- console.log('filter', fileSize)
-
- const listHasPilots = configData.some((data) => data.id == 2);
- console.log('some', listHasPilots)
-
- const listHasPilotss = configData.every((data) => data.id == 2);
- console.log('every', listHasPilotss)
-
- chapter 2
- var n = 2;
-
- function square(num) {
-     var ans = num * num;
-     return ans;
- }
- var square2 = square(n);
- console.log('square2', square2)
- var square4 = square(4);
- console.log('square4', square4)
-
- chapter 3
- u can access fn and variable before initialization
- hoisting
-
- console.log("a", a);
- console.log("abc", abc);
-
- // console.log("test", b);
- function abc() {
-     console.log("inside xyz");
- }
- var a = 7;
- console.log("a", a);
- console.log("abc", abc);
-
- chapter 4
-
- var x = 1;
- a();
- b();
- console.log('x', x)
-
- function a() {
-     var x = 10;
-     console.log(x);
- };
-
- function b() {
-     var x = 100;
-     console.log(x);
- };
-
- chapter 7
- lexical env, scope and scope change
- function a() {
-     var b = 10;
-     console.log("incide b", b);
-
-     function c() {
-         console.log("incide c", b);
-     }
-     c();
- }
- // console.log("incide c", b);
- a();
-
- chapter 8
- var const and let and Temporal Dead Zone
- console.log('a', a)
- console.log('d', d)
- var a
- var d = 10
- let b = 20
-
- const c = 5
-
- chapter 9
- closures = fn with lexical env
-
- function x() {
-     var a = 7;
-
-     function y() {
-         console.log(a);
-     }
-     y();
-     var a = 100;
-     return a
- }
- x();
- console.log("x()", x());
-
- function z() {
-     var b = 900;
-
-     function x() {
-         var a = 7;
-
-         function y() {
-             console.log(a, b);
-             return a, b
-         }
-         y();
-     }
-     return x();
- }
-
- var a = z();
- console.log('a', a)
-
- function x() {
-     var i = 1;
-     setTimeout(function x() {
-         console.log(i);
-     }, 3000);
- }
- x();
-
- function outest() {
-     var c = 30
-
-     function outer(b) {
-         var a = 10;
-         // b = 20
-
-         function inner() {
-             console.log(a, b, c);
-         }
-         return inner();
-     }
-     return outer("test1");
- }
- var a = 100
- outest()
-
- var close = outer();
- close();
-
- /
-
- function parent() {
-     var a = 10;
-
-     function child() {
-         var b = 20;
-
-         function grandChild() {
-             var c = 20;
-             console.log(a, b, c);
-         }
-         return grandChild();
-     }
-     return child();
- }
-
- var test = parent()();
-
- call apply and bind
-
- let name1 = {
-     fn: "shalu",
-     ln: "gowda",
- };
-
- let printname = function(town, state) {
-     console.log(this.fn, this.ln, town, state);
- };
- printname.call(name1, 'c', 'd');
-
- let name2 = {
-     fn: "sha",
-     ln: "gow",
- };
-
- //function barrow
- printname.call(name2, 'a', 'b');
- printname.apply(name2, ['a', 'b']);
- let name3 = printname.bind(name2, 'a', 'b');
- console.log('name', name3)
-
- name3();
-
- polyfill
- let name1 = {
-     fn: "sha",
-     ls: "gowda",
- };
-
- let fullName = function(town, sta, cou) {
-     console.log(this.fn, this.ls, town, sta, cou);
- };
-
- let namessss = fullName.bind(name1, 'town', 'sta', 'cou');
- namessss();
-
- Function.prototype.myBind = function(...args) {
-     let obj = this;
-     params = args.slice(1)
-     return function(...arg2) {
-         obj.apply(args[0], [...params, ...arg2]);
-     };
- };
-
- let namess = fullName.myBind(name1, 'town', 'sta', 'cou');
- namess();
-
- currying
- function multiply(a,b){
-     return a*b;
-   }
-
-   function currying(fn){
-     return function(a){
-       return function(b){
-         return fn(a,b);
-       }
-     }
-   }
-
-   var curriedMultiply = currying(multiply);
-
-   multiply(4, 3); // Returns 12
-
-   curriedMultiply(4)(3); // Also returns 12
-
- 1) bind
- 2) closure
-
- 2 closure
- let multiply = function(x) {
-     return function(y) {
-         console.log(x * y)
-     }
- }
-
- let multi = multiply(2)
- multi(3)
 
 How can I write a Test case for HTTP failure
 https://www.damirscorner.com/blog/posts/20210827-TestingFailingHttpRrequestsInAngular.html
@@ -903,134 +432,72 @@ How to do find the error is server error?
 How do change request before send to server?
 Difference of SVG & Canvas? 
 ================
-datatable filter in entire column
-filterItems: function (tableData, query) {
-      const lowerCaseQuery = query.toLowerCase()
-      return tableData.filter(task => {
-        return Object.values(task)
-          .some(value => ('' + value).toLowerCase().includes(lowerCaseQuery))
-      })
-    }
-datatable column based filter
- filterItems: function (arr, query) {
-      return arr.filter((item) => {
-        const matchValues = {
-          sbName: (item.sbName || '').toLowerCase(),
-          sbNumber: (item.sbNumber || '').toLowerCase(),
-          status: (item.status || '').toLowerCase(),
-          engineModel: (item.engineModel || '').toLowerCase()
-        }
-        return Object.keys(query).every((key) =>
-          matchValues[key].includes((query[key] || '').toLowerCase())
-        )
-      })
-    }
-================
-// creating a promise
+How can I write a Test case for HTTP failure
+https://www.damirscorner.com/blog/posts/20210827-TestingFailingHttpRrequestsInAngular.html
 
-// function promiseCreation(name){
-//   const pr = new Promise(
-//     function(resolve, reject){
-//         let test = {
-//           status: 200,
-//           data: 'https://api.github.com/users/'+ name,
+Can we create multiple instances of a Service
+https://stackoverflow.com/questions/48504654/angular-5-create-multiple-instances-of-one-service
 
-//         }
-//         if(test.status===200){
-//           resolve(test.data)
-//         } else{
-//           const err = new Error("error in api")
-//           reject(err)
-//         }
-//     }
-//   )
-//   return pr
-// }
+Dynamically injecting the Template
+https://stackoverflow.com/questions/58514584/angular-dynamic-template-injection
 
-// // consuming of the promise
-// const prResult = promiseCreation('shalinishalu23')
-// console.log('prResult: ', prResult)
-// prResult
-// .then(function(data){
-//   console.log('data: ', data)
-//   fetch(data).then(function(test){
-//     console.log('test: ', test)
-//   })
-// })
-// .then(console.log('call another fn'))
-// .catch(function(err){
-// console.log(err.message);
-// })
+How to pass data from grandchild to parent
+https://stackoverflow.com/questions/58975892/pass-value-between-grandchild-component-and-parent-component
 
+Content projection?
+https://codecraft.tv/courses/angular/components/content-projection/
 
-// async await
-// always return promise
+Explain about angular routing and navigation? 
 
-const p1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('p1 resolve')
-  }, 5000)
-})
-const p2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('p2 resolve')
-  }, 10000)
-})
+Is JS single threaded or Multi-threaded
+Single thread and synchronous
+Singleton Service and how we achieve singleton design pattern in Angular application 
 
-// // with async await 
-// async function getData() {
-//   try {
-//     console.log('log1');
-//     await p1.then(res => console.log(res))
-//     console.log('log2');
-//     await p2.then(res => console.log(res))
-//     console.log('log3');
-//   }
-//   catch (err) {
-//     console.log('err: ', err);
-//   }
-// }
+What happens to TS Classes once they are compiled to JS
+https://medium.com/jspoint/typescript-compilation-the-typescript-compiler-4cb15f7244bc  
 
-// without async await , its just promise
-function getData() {
-  console.log('log1');
-  p1.then(res => console.log(res))
-  console.log('log2');
-  p2.then(res => console.log(res))
-  console.log('log3');
-}
-getData()
-============================
-function debounce(func, delay) {
-    console.log('debounce: ')
-    let timeoutId;
+extends vs implements
+https://www.geeksforgeeks.org/extends-vs-implements-in-java/
 
-    return function() {
-        const context = this;
-        const args = arguments;
+What is Abstract Method in TS?
+What are Interfaces in TS?
 
-        clearTimeout(timeoutId);
-        timeoutId = setTimeout(() => {
-            console.log('timeoutId: ', timeoutId)
-            func.apply(context, args);
-        }, delay);
-    };
-}
+How can I achieve Inheritance in JS
+JavaScript inheritance is done through prototypes
+https://www.javascripttutorial.net/es6/javascript-inheritance/
 
-function apiCall() {
-    console.log('API called');
-}
+How to handle global errors? 
+The global error handler middleware is used catch all exceptions thrown by the api in a single place, 
+removing the need for duplicated error handling code throughout the application
 
-const debouncedApiCall = debounce(apiCall, 2000);
-=====================
-const targetRoute = { name: 'communication', params: { comNum: processId } }
-        const currentRoute = router
-        if (
-          currentRoute.name !== targetRoute.name ||
-          currentRoute.params.comNum !== targetRoute.params.comNum
-        ) {
-          router.push(targetRoute)
-        }
+Who keeps track of setTimeout event if JS is single threaded
+
+Flex layout
+stackblitz.com/edit/flex?file=app%2Fapp.component.html
+Root injector  
+
+showdo n deep copy
+
+ng-template vs ng-container
+stackoverflow.com/questions/40529537/ng2-difference-between-ng-container-and-ng-template-tags
+
+TDD- write test case before writing code(test cases first approch)
+changeDetection
+Change Detection means updating the view (DOM) when the data has changed.
+https://www.thirdrocktechkno.com/blog/how-angular-change-detection-works/
+
+A singleton service is a service for which only one instance exists in an application.
+
+Security in Angular
+cross-site scripting (XSS),Sanitization and security contexts,Direct use of the DOM APIs and explicit sanitization calls,
+Trusting safe values,Content security policy,Enforcing Trusted Types,
+Use the AOT template compiler,HTTP-level vulnerabilities
+
+Providers in component and ngModule difference and usage
+
+How to do find the error is server error?   
+How do change request before send to server?
+Difference of SVG & Canvas? 
 =========================
 this.globalService.jwtToken$.next(jwtToken);
 
@@ -1044,74 +511,6 @@ this.globalService.jwtToken$.subscribe((data: any) => {
       }
     });
 ===================================================
-
-How can I write a Test case for HTTP failure
-https://www.damirscorner.com/blog/posts/20210827-TestingFailingHttpRrequestsInAngular.html
-
-Can we create multiple instances of a Service
-https://stackoverflow.com/questions/48504654/angular-5-create-multiple-instances-of-one-service
-
-Dynamically injecting the Template
-https://stackoverflow.com/questions/58514584/angular-dynamic-template-injection
-
-How to pass data from grandchild to parent
-https://stackoverflow.com/questions/58975892/pass-value-between-grandchild-component-and-parent-component
-
-Content projection?
-https://codecraft.tv/courses/angular/components/content-projection/
-
-Explain about angular routing and navigation? 
-
-Is JS single threaded or Multi-threaded
-Single thread and synchronous
-Singleton Service and how we achieve singleton design pattern in Angular application 
-
-What happens to TS Classes once they are compiled to JS
-https://medium.com/jspoint/typescript-compilation-the-typescript-compiler-4cb15f7244bc  
-
-extends vs implements
-https://www.geeksforgeeks.org/extends-vs-implements-in-java/
-
-What is Abstract Method in TS?
-What are Interfaces in TS?
-
-How can I achieve Inheritance in JS
-JavaScript inheritance is done through prototypes
-https://www.javascripttutorial.net/es6/javascript-inheritance/
-
-How to handle global errors? 
-The global error handler middleware is used catch all exceptions thrown by the api in a single place, 
-removing the need for duplicated error handling code throughout the application
-
-Who keeps track of setTimeout event if JS is single threaded
-
-Flex layout
-stackblitz.com/edit/flex?file=app%2Fapp.component.html
-Root injector  
-
-showdo n deep copy
-
-ng-template vs ng-container
-stackoverflow.com/questions/40529537/ng2-difference-between-ng-container-and-ng-template-tags
-
-TDD- write test case before writing code(test cases first approch)
-changeDetection
-Change Detection means updating the view (DOM) when the data has changed.
-https://www.thirdrocktechkno.com/blog/how-angular-change-detection-works/
-
-A singleton service is a service for which only one instance exists in an application.
-
-Security in Angular
-cross-site scripting (XSS),Sanitization and security contexts,Direct use of the DOM APIs and explicit sanitization calls,
-Trusting safe values,Content security policy,Enforcing Trusted Types,
-Use the AOT template compiler,HTTP-level vulnerabilities
-
-Providers in component and ngModule difference and usage
-
-How to do find the error is server error?   
-How do change request before send to server?
-Difference of SVG & Canvas? 
-================
 datatable filter in entire column
 filterItems: function (tableData, query) {
       const lowerCaseQuery = query.toLowerCase()
