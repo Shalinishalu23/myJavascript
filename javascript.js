@@ -736,3 +736,333 @@
 //   value: a
 // }))
 // console.log('testing: ', result)
+
+/ ES6
+// Arrow Functions
+// const add = (a, b) => a + b;
+// const greet = name => `Hello ${name}`;
+
+// var a = 7;
+// console.log("7", 7);
+// function add() {
+//   console.log("add fn called");
+// }
+// add()
+// let val;
+// const pi = 3.14;
+// function outest(c) {
+//   console.log("c", c);
+//   function outer(a) {
+//     console.log("a", a);
+//     function inner(b) {
+//       console.log("b", a, b, c);
+//     }
+//     inner(8);
+//   }
+//   outer(6);
+// }
+
+// outest(7);
+
+// function add (a) {
+//     return function(b){
+//         console.log('a  b', a , b)
+//       return a + b;
+//     }
+//   }
+//   add(3)(4)
+
+// //   or
+
+//   function add (a) {
+//     function add1 (b){
+//        console.log('a  b', a , b)
+//      return a + b;
+//    }
+//    add1(4)
+//  }
+
+//  add(3)
+
+// spread operator
+// this.myFunc(0,1, 2, 3, 4, 5, 6);
+// function myFunc(...arg) {
+//   console.log("arg index", arg[5]);
+//   console.log("arg", arg);
+// }
+
+// rest param
+// function myFunc(arg1, arg2, ...arg) {
+//   console.log("arg", arg1, arg2);
+// }
+// =======================
+
+// configData = [
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+// ];
+
+// let id1 = configData.map(data => data.id)
+// let id2 = configData.filter(data => data.id==2)
+// let id3= configData.find(data => data.id==2)
+// let id4 = configData.some(data => data.id==2)
+// let id5= configData.every(data => data.id==2)
+// let id5= configData.slice(0,5)
+// let id5= configData.splice(0,8)
+// let id5= configData.shift()
+// let id5= configData.unshift(12)
+// let id6= configData.reduce((acc, pilot) => acc + pilot.id, 0)
+// console.log('id1: ', id1)
+// console.log('id2: ', id2)
+// console.log('id3: ', id3);
+// console.log('id4: ', id4);
+// console.log('id5: ', id5);
+// console.log('id6: ', id6);
+
+// configData = [
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+// ];
+// //remove duplication
+// var res = configData.filter(
+//   (c, b, s) => s.findIndex((d) => d.id === c.id) === b
+// );
+// console.log("res", res);
+// =========================
+// // difference in 2 array
+// // Array Object 1
+// const arrayObjOne = [
+//   { userId: "1", display: "Jamsheer" },
+//   { userId: "2", display: "Muhammed" },
+//   { userId: "3", display: "Ravi" },
+//   { userId: "4", display: "Ajmal" },
+//   { userId: "5", display: "Ryan" },
+// ];
+
+// // Array Object 2
+// const arrayObjTwo = [
+//   { empId: "1", display: "Jamsheer", designation: "Jr. Officer" },
+//   { empId: "2", display: "Muhammed", designation: "Jr. Officer" },
+//   { empId: "3", display: "Ravi", designation: "Sr. Officer" },
+//   { empId: "4", display: "Ajmal", designation: "Ast. Manager" },
+// ];
+// // difference in array
+// // const ResultArrayObjOne = arrayObjOne.filter(
+// //   ({ userId: userId }) =>
+// //     !arrayObjTwo.some(({ empId: empId }) => empId === userId)
+// // );
+// // console.log(ResultArrayObjOne);
+
+// // common in Array
+// var common = arrayObjOne.filter(item1 => arrayObjTwo.some(item2 => item1.userId === item2.empId)) // common
+// var dif = arrayObjOne.filter(item1 => !arrayObjTwo.some(item2 => item1.userId === item2.empId)) // difference
+// console.log('common', common)
+// console.log('dif', dif)
+
+// arrays
+// let intersection = arrayObjOne.filter(x => arrayObjTwo.includes(x));
+// console.log('intersection', intersection)
+
+// _.intersection( arrayObjOne ,arrayObjTwo )
+// console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
+
+// ================================
+// configData = [
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+// ];
+// console.log("configData", configData);
+
+// const id = configData.map((res) => res.id);
+// console.log("map", id);
+
+// const results = configData.reduce((acc, pilot) => acc + pilot.id, 0);
+// console.log("reduce", results);
+
+// const firstPilot = configData.find((data) => data.id);
+// console.log('find', firstPilot)
+
+// const fileSize = configData.filter((data) => data.id == 2);
+// console.log('filter', fileSize)
+
+// const listHasPilots = configData.some((data) => data.id == 2);
+// console.log('some', listHasPilots)
+
+// const listHasPilotss = configData.every((data) => data.id == 2);
+// console.log('every', listHasPilotss)
+
+// const id1 = configData.findIndex(item => item.id ===2 )
+// console.log('id1: ', id1);
+
+// // undefined and undeclared
+// console.log('testing: ', testing) //undefined
+// var testing
+// testing = 3
+
+// console.log('test: ', test) //undeclared
+
+// // primitive and non primitive
+// Primitive: Stored by value, immutable, compared by value.
+// Non-Primitive: Stored by reference, mutable, compared by reference.
+// // Primitive types
+// let num = 42;              // Number
+// let str = "Hello";         // String
+// let bool = true;           // Boolean
+// let und = undefined;       // Undefined
+// let nul = null;            // Null
+// let sym = Symbol("id");    // Symbol
+// let bigInt = 123n;         // BigInt
+
+// // Non-primitive types
+// let arr = [1, 2, 3];                 // Array
+// let obj = { name: "Alice" };         // Object
+// let func = function() { return 1; }; // Function
+// let date = new Date();               // Date object
+
+// let a = 10;
+// let b = a;
+// b = 20;
+// console.log(a); // 10 (primitive, value copy)
+
+// let x = { val: 10 };
+// let y = x;
+// y.val = 20;
+// console.log(x.val); // 20 (non-primitive, reference copy)
+
+// hoisting
+// console.log("testing: ", testing);
+// var testing;
+// testing = 6;
+// console.log("testing: ", testing);
+
+// function outer() {
+//     let test;
+//     function inner() {
+//         test = 3;
+
+
+//         function core() {
+
+
+//             console.log("test: ", test);
+//             return test;
+//         }
+//         return core();
+//     }
+//     return inner();
+// }
+// console.log("outer(): ", outer());
+
+// Immediately Invoked Function Expression (IIFE)
+// (function () {
+//   console.log("IIFE runs immediately!");
+// })();
+
+// = “ (compare values) and “ === “(both value and types)
+// let test = 3;
+// let testing = "3";
+
+// console.log("test == testing: ", test === testing);
+
+// call apply and bind
+// let name = {
+//     fn: 'Shalini',
+//     ls: 'M'
+// }
+
+// function fullName(town, place) {
+//     console.log(this.ls, this.fn, town , place);
+
+// }
+// fullName.call (name, 'KA', 'Mysore')
+// fullName.apply(name, ['KA', 'Mysore'])
+// const test = fullName.bind(name, 'KA', 'Mysore')
+// console.log('test: ', test);
+
+// call back fun
+// function greet(name, callback) {
+//   console.log("Hello, " + name + "!");
+//   callback();
+// }
+
+// function sayGoodbye() {
+//   console.log("Goodbye!");
+// }
+
+// greet("Alice", sayGoodbye);
+// // Output:
+// // Hello, Alice!
+// // Goodbye!
+
+
+// setTimeout(() => {
+//     console.log('3000: ')
+// }, 3000);
+
+// setInterval(() => {
+//     date = new Date()
+//     console.log('date: ', date)
+// }, 1000);
+
+
+// A WebSocket is a protocol that enables two-way, persistent communication between a client and a server
+// WebSockets allow real-time data transfer with less overhead.
+// const socket = new WebSocket('wss://ws.ifelse.io')
+
+// socket.onopen = function(){
+//   console.log('WebSocket connection opened');
+//   socket.send('Hello, server!');
+// }
+// socket.onclose = function(){
+//   console.log('WebSocket connection closed');
+// }
+// socket.onerror = function(error){
+//     console.log('error: ', error);
+// }
+// socket.onmessage = function(event){
+//     console.log('event: ', event.data)
+// }
