@@ -498,6 +498,8 @@ Providers in component and ngModule difference and usage
 How to do find the error is server error?   
 How do change request before send to server?
 Difference of SVG & Canvas? 
+A WebSocket is a protocol that enables two-way, persistent communication between a client and a server
+WebSockets allow real-time data transfer with less overhead.
 =========================
 this.globalService.jwtToken$.next(jwtToken);
 
