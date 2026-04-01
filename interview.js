@@ -193,7 +193,7 @@ JS
 	scope,polyfill,currying,debouncing,event bubbling &capturing,throttling,web socket,event loop
 	forkJoin will wait for all passed observables to emit and complete and then it will emit an array or an object with last values from corresponding observables.
 	currying -if we have a function f(a,b) , then the function after currying, will be transformed to f(a)(b).
-	slice,splice
+	slice(modify shollow array),splice(modify original array)
 	JS 
 	ES6		
 	es5 vs es6  
@@ -308,6 +308,8 @@ CSS
 	Difference between div and span tags? 
 	Why we use semantic elements? 
 	What are meta tags? 
+	responsive (media query)
+    semantic and non semantic
 
 Authentication and authorization	
 throttling(key stroke diff time 300ms)
@@ -1030,3 +1032,108 @@ const targetRoute = { name: 'communication', params: { comNum: processId } }
           router.push(targetRoute)
         }
 =========================
+this.globalService.jwtToken$.next(jwtToken);
+
+ public jwtToken$ = new BehaviorSubject<any>('');
+  jwtToken = this.jwtToken$.asObservable();
+
+this.globalService.jwtToken$.subscribe((data: any) => {
+      if (data) {
+        this.getToken = data;
+        console.log('get', data);
+      }
+    });
+===================================================
+
+How can I write a Test case for HTTP failure
+https://www.damirscorner.com/blog/posts/20210827-TestingFailingHttpRrequestsInAngular.html
+
+Can we create multiple instances of a Service
+https://stackoverflow.com/questions/48504654/angular-5-create-multiple-instances-of-one-service
+
+Dynamically injecting the Template
+https://stackoverflow.com/questions/58514584/angular-dynamic-template-injection
+
+How to pass data from grandchild to parent
+https://stackoverflow.com/questions/58975892/pass-value-between-grandchild-component-and-parent-component
+
+Content projection?
+https://codecraft.tv/courses/angular/components/content-projection/
+
+Explain about angular routing and navigation? 
+
+Is JS single threaded or Multi-threaded
+Single thread and synchronous
+Singleton Service and how we achieve singleton design pattern in Angular application 
+
+What happens to TS Classes once they are compiled to JS
+https://medium.com/jspoint/typescript-compilation-the-typescript-compiler-4cb15f7244bc  
+
+extends vs implements
+https://www.geeksforgeeks.org/extends-vs-implements-in-java/
+
+What is Abstract Method in TS?
+What are Interfaces in TS?
+
+How can I achieve Inheritance in JS
+JavaScript inheritance is done through prototypes
+https://www.javascripttutorial.net/es6/javascript-inheritance/
+
+How to handle global errors? 
+The global error handler middleware is used catch all exceptions thrown by the api in a single place, 
+removing the need for duplicated error handling code throughout the application
+
+Who keeps track of setTimeout event if JS is single threaded
+
+Flex layout
+stackblitz.com/edit/flex?file=app%2Fapp.component.html
+Root injector  
+
+showdo n deep copy
+
+ng-template vs ng-container
+stackoverflow.com/questions/40529537/ng2-difference-between-ng-container-and-ng-template-tags
+
+TDD- write test case before writing code(test cases first approch)
+changeDetection
+Change Detection means updating the view (DOM) when the data has changed.
+https://www.thirdrocktechkno.com/blog/how-angular-change-detection-works/
+
+A singleton service is a service for which only one instance exists in an application.
+
+Security in Angular
+cross-site scripting (XSS),Sanitization and security contexts,Direct use of the DOM APIs and explicit sanitization calls,
+Trusting safe values,Content security policy,Enforcing Trusted Types,
+Use the AOT template compiler,HTTP-level vulnerabilities
+
+Providers in component and ngModule difference and usage
+
+How to do find the error is server error?   
+How do change request before send to server?
+Difference of SVG & Canvas? 
+================
+datatable filter in entire column
+filterItems: function (tableData, query) {
+      const lowerCaseQuery = query.toLowerCase()
+      return tableData.filter(task => {
+        return Object.values(task)
+          .some(value => ('' + value).toLowerCase().includes(lowerCaseQuery))
+      })
+    }
+datatable column based filter
+ filterItems: function (arr, query) {
+      return arr.filter((item) => {
+        const matchValues = {
+          sbName: (item.sbName || '').toLowerCase(),
+          sbNumber: (item.sbNumber || '').toLowerCase(),
+          status: (item.status || '').toLowerCase(),
+          engineModel: (item.engineModel || '').toLowerCase()
+        }
+        return Object.keys(query).every((key) =>
+          matchValues[key].includes((query[key] || '').toLowerCase())
+        )
+      })
+    }
+const uniqueChars = [...new Set([...str])];
+console.log(uniqueChars);
+========================
