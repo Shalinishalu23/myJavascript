@@ -1,128 +1,1032 @@
-// // undefined and undeclared
-// console.log('testing: ', testing) //undefined
-// var testing
-// testing = 3
+ tell me abt urself in short with skill set
+	about current project and Architechture, domain
+	challenges u faced and resolved
+	Roles and responsibility
+	how to improve application performance(laxy loading, debouncing, throttling, page from server, scoll from server,Bundle,
+	preloading,Minification and dead code elimination,Lazy Loading,Ahead of Time compilation,Server-side rendering,Compressed files
 
-// console.log('test: ', test) //undeclared
+JavaScript
+Angular
+vue
+react
+html
+css
 
-// // primitive and non primitive
-// Primitive: Stored by value, immutable, compared by value.
-// Non-Primitive: Stored by reference, mutable, compared by reference.
-// // Primitive types
-// let num = 42;              // Number
-// let str = "Hello";         // String
-// let bool = true;           // Boolean
-// let und = undefined;       // Undefined
-// let nul = null;            // Null
-// let sym = Symbol("id");    // Symbol
-// let bigInt = 123n;         // BigInt
+angular
+	Angular architecture(Modules,component,service,dependency Injector, template,metadata,directive,data binding)
+	angular.json-  configurations of the app
+	tsconfig -complier option 
+	IVY compiler aot
+    differential loading v7 to v8+ Differential loading lets you serve up different bundles to different browsers and make your application even faster
+    navigator in JS
+	Life cycle
+	ngOnChanges: Is called, when an input/output binding value changes.
+	ngOnInit: Is called after the first ngOnChanges.
+	ngDoCheck: Is called, if we as developer triggered a custom change detection.
+	ngAfterContentInit: Is called after the content of a component is initialized.
+	ngAfterContentChecked: Is called after every check of the component’s content.
+	ngAfterViewInit: Is called after a component’s views are initialized.
+	ngAfterViewChecked: Is called after every check of a component’s views.
+	ngOnDestroy: Is called just before the directive is destroyed.
+	Compilation-In JIT compilation, the application compiles inside the browser during runtime.Whereas in the AOT compilation, the application compiles during the build time.
+	Data-binding-one-way(interpolation{{}},propery binding[],event bindin(click()) and two-way binding[(ngModel)]=''.
+	Promise((resolve, reject)then asyn and await asynchronous, 
+	var promise = new Promise((resolve, reject) => {
+    resolve("Promise Resolved"); 
+    }) 
+    promise.then((success) => { 
+        console.log(success); 
+    }) 
+    .catch(function(error) => { 
+        console.log(error); 
+    }).finally();
+	Directive(ACS)(Component--selector,decorator,template/ Structural-*ngIf and *ngFor / Attribute- ng class , ng style)
+	server-side called Angular Universal,
+	share data between components -- @Input,@Output() backBoolean = new EventEmitter(); , emit,  @ViewChild(ChildComponent,{static:false}) child; service,BehaviorSubject
+    @ViewChild('tt') in html(to access template element with eleRef)
+	Dependency Injection(creating service and inject in to component and have dependency in component
+	MVVM
+	metadata(used to decorate,1.class dec-@component, @ngmododule,2. property dec -@input , @output 3.method dec @hostlistener 4.parameter dec @inject(to inject service)
+	| async to get latest value		
+	Lazy loading	
+    ng g m home --route home --module app.module
+	What are @HostBinding and @HostListener?	
+	@HostBinding - will bind the property to the host element, If a binding changes, HostBinding will update the host element.(CSS and validation related thing)
+	@HostListener - will listen to the event emitted by the host element that's declared with @HostListener.(pipes)
+	ViewEncapsulation: emulate(default),none,shadow dom/Component CSS styles are encapsulated into the component’s view to avoid styling side effects in the rest of the Ang app
+	decorator(@) and annotation (both same)
+	package json(version)/packagelock(full details)To avoid differences in installed dependencies on different environments and to generate the same results on every environment 
+    https HttpClient,get post put delete
+	canactivate=> Interface that a class can implement to be a guard deciding if a route can be activated. If all guards return true , navigation continues 
+	Route Gaurds, custom route gaurds and why to use
+	https://www.digitalocean.com/community/tutorials/angular-route-guards
+	The Angular router’s navigation guards allow to grant or remove access to certain parts of the navigation.
+	the CanDeactivate guard, even allows you to prevent a user from accidentally leaving a component with unsaved changes.
+	Routing = Routes and Paths (redirectTo /pathMatch)	
+	Route Guards canActivate,CanActivateChild,CanDeactivate,CanLoad,Resolve(control the accessibility of a route)
+	<router-outlet></router-outlet>
+	The Navigation Directives <a [routerLink]="'/products'">Products</a>,router navigation
+	pipes(it helps to transform data and manage data within interpolation by {{ | }})
+	A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe.
+    An impure pipe is called for every change detection cycle no matter whether the value or parameter(s) changes	
+	Forms(Template(FormsModule, #userName="ngForm",ngModel ) and reactive(ReactiveFormsModule,[formGroup]="formdata",FormControl,FormArray)
+	angular.json "styles": [  
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css",  
+    "src/styles.css"  ],  
+	validations -required,MinLength,dirty,touched	
+	HttpInterceptor
+	browsermodule, commonmodule, formsmodule
+	providers[], services
+	Reduce Initial Load Time=>Bundle,preloading,Minification and dead code elimination,Lazy Loading,Ahead of Time compilation,Server-side rendering,Compressed files
+	Preloading modules — Loading modules asynchronously in the background is called preloading modules. This technique should be used with lazy loading.
+	session v/s local- sessionStorage is lost the moment the browser is closed, while localStorage remain till the browser cache is cleared.
+	bootstrap -Fluid Layout,Fixed Layout
+	agile,scrum, git,jira
+	Framework used in UT -Jasmin and run in Karma
+	Why spyOn used, how services call in testcases
+	useFactory - 2 instance from same service
+	loadactive, mapfilters
+	TypeScript is a primary language for Angular application development. It is a superset of JavaScript with design-time support for type safety and tooling. Browsers can't execute TypeScript directly. Typescript must be "transpiled" into JavaScript using the tsc compiler, which requires some configuration.
+	difference between constructor and ngOnInit
+	The Constructor is a default method of the class that is executed when the class is instantiated and ensures proper initialisation
+	ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component.
 
-// // Non-primitive types
-// let arr = [1, 2, 3];                 // Array
-// let obj = { name: "Alice" };         // Object
-// let func = function() { return 1; }; // Function
-// let date = new Date();               // Date object
+	What are RxJS Operators?
+	https://www.thisdot.co/blog/basic-rxjs-operators-and-how-to-use-them
+	of - Creation Operator.
+	from - Creation Operator.
+	map - Transformation Operator.
+	switchMap - Transformation Operator.
+	tap - Utility Operator.
+	take - Filtering Operator.
+	
+	rxjs(observals,replaysubject,subject)
+	behaviour subject- RxJS has observers (consuming interface) and observables (push interface)-can emit the current value 
+	Subject and Behavior Subject
+	https://stackoverflow.com/questions/43348463/what-is-the-difference-between-subject-and-behaviorsubject
+	https://stackoverflow.com/questions/43118769/subject-vs-behaviorsubject-vs-replaysubject-in-angular
+	A BehaviorSubject holds one value. When it is subscribed it emits the value immediately. A Subject doesn't hold a value
+	BehaviorSubject should be created with an initial value: new Rx.BehaviorSubject(1)
+	Consider ReplaySubject if you want the subject to hold more than one value	
+	How u stop/cancel api call after certain period of time - import { takeUntil } from 'rxjs/operators';
+	observable-next,error,complete both synchronous and asynchronous.
+	Observables provide support for data sharing between publishers and subscribers in an angular application	
+	obs = new Observable((observer) => {  observer.next("1")} 
+	this.obs.subscribe( val=> { console.log(val) },
+      error => { console.log("error")},
+      () => {console.log("Completed")}
+    )
+	cold observables and hot observables 
+	Hot observables are ones that are pushing event when you are not subscribed to the observable. Like mouse moves, or Timer ticks or anything like that. 
+	Cold observables are ones that start pushing only when you subscribe, and they start over if you subscribe again. 
 
-// let a = 10;
-// let b = a;
-// b = 20;
-// console.log(a); // 10 (primitive, value copy)
+	MVVM 
+	metadata(used to decorate,1.class dec-@component, @ngmododule,2. property dec -@input , @output 3.method dec @hostlistener @HostBinding
+	4.parameter dec @inject(to inject service) 
+	| async to get latest value  
+	Error Handling 	
+	nglint
+	bootstrap run  
+	https HttpClient,get post put delete 
+	
+	Resolvers
+	Angular Resolver is used for pre-fetching some of the data when the user is navigating from one route to another
+	ProviedIn(in service )
+	Tree Shaking is a way to remove unused modules from the final bundle file of the application
+	pipes(helps to transform data and manage data within interpolation by {{ | }})
+	A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. 
+	An impure pipe is called for every change detection cycle no matter whether the value or parameter(s) changes  
+	Forms(Template(FormsModule, #userName="ngForm",ngModel ) and reactive(ReactiveFormsModule,[formGroup]="formdata",FormControl,FormArray) 
+	template and reactive forms(validation and where)
+	Validators.required,dirty,touched,email,minLength,maxlength
+	What are FormControl, FormGroup in Angular?
+	import { FormGroup, FormControl,Validators } from '@angular/forms'
+	 frmGroup = new FormGroup({
+		firstName: new FormControl('', []),
+		lastName: new FormControl('', []),
+	  })
+ 	What is the difference between hidden and ngIf  
+	ngIf will comment out the data if the expression is false. This way the data are not even loaded, causing HTML to load faster.
+	[hidden] will load the data and mark them with the hidden HTML attribute. This way data are loaded even if they are not visible.
+	angular.json "styles": [ 
+		"./node_modules/bootstrap/dist/css/bootstrap.min.css",  
+		"src/styles.css"  ],   
+	HttpInterceptor 
+	browsermodule, commonmodule, formsmodule 
+	providers[], services 
+	Reduce Initial Load Time=>Bundle,preloading,Minification and dead code elimination,Lazy Loading,Ahead of Time compilation,Server-side rendering,Compressed files 
+	Preloading modules — Loading modules asynchronously in the background is called preloading modules. This technique should be used with lazy loading. 
+	session v/s local- sessionStorage is lost the moment the browser is closed, while localStorage remain till the browser cache is cleared. 
+	bootstrap -Fluid Layout,Fixed Layout 
+	How u stop/cancel api call after certain period of time - import { takeUntil } from 'rxjs/operators'; 
+	Framework used in UT -Jasmin and run in Karma , TDD test driven development 
+	Why spyOn used, how services call in testcases 
+	useFactory - 2 instance from same service 
+	loadactive, mapfilters 
+	TypeScript is a primary language for Angular application development. It is a superset of JavaScript with design-time support for type safety and tooling. 
+	Browsers can't execute TypeScript directly. Typescript must be "transpiled" into JavaScript using the tsc compiler, which requires some configuration. 
+			
+JS	
+	Js is synchronous single threaded language
+    Execution context(memory and code)
+	Undefined variable means a variable has been declared but it does not have a value.
+    Undeclared variable means that the variable does not exist in the program at all.
+	Primitive(string int bigint boolean and passed by value ) and non primitive(obj passed by reference)
+	Hoisting - u can access fn and variable before initialization or Hoisting is a default behaviour of javascript where all the variable and function declarations are moved on top.
+	Closures - Closures is an ability of a function to remember the variables and functions that are declared in its outer scope of lexical environment
+		https://dev.to/provish/closures-in-javascript-5fab
+	Immediately Invoked Function(IIFE)
+	(function (){
+    //Do something;
+    })();
+	“ == “ (compare values) and “ === “(both value and types)
+	Higher Order Functions-Functions that operate on other functions, either by taking them as arguments or by returning them, are called so
+	call()-sayHello.call(obj), apply() and, bind()(bind return function )
+	Use .bind() when you want that function to later be called with a certain context, useful in events. 
+	Use .call() or .apply() when you want to invoke the function immediately, and modify the context.
+	callbacks- A callback is a function that will be executed after another function gets executed.
+	array methods , operatives(map(), .reduce(accumulator, pilot), and .filter(),some()-> boolean, .every() ->check every ele, find(),fill
+	basic advan(colsure, hoisting , asyn await, promise , call back ES6(episode 1,2 10)
+	promise => is an object representing eventual completion or failure of the async operation
+	debouncing - if keystroke b/w words 300s time
+	throttling - call api b/w every 300s time
+	scope,polyfill,currying,debouncing,event bubbling &capturing,throttling,web socket,event loop
+	forkJoin will wait for all passed observables to emit and complete and then it will emit an array or an object with last values from corresponding observables.
+	currying -if we have a function f(a,b) , then the function after currying, will be transformed to f(a)(b).
+	slice,splice
+	JS 
+	ES6		
+	es5 vs es6  
+	prototype and advantage
+	Inheritance the properties and the methods , we can change the behaviour of it
+	advantage it is only stored in the memory once, but every instance of the object has access to it
+	Event Queue, Event loop, call Stack, event propagation
+	scope(global,variable(class), local)
+	web worker
+	(function (){ 
+		//Do something; 
+		})(); 
+	https://www.freecodecamp.org/news/how-webworkers-work-in-javascript-with-example/
+	IIFE (Immediately Invoked Function Expression)
+	window and document object in javascript
+	What is Gulp and Grunt
+	gulp and Grunt are task runners. They are different approaches to same problem. Grunt uses configuration based approach, 
+	while gulp uses streams from node to achieve result. You use them to define how and which tasks to execute 
+	(copying files, adding banners, replacing text, style checking, etc...
+	var(function scope) and let (block scope)
+	Event Queue, Event loop, Stack
+	What are ES6 concepts in JavaScript? 
+	Explain inheritance in JavaScript? 
+	What is Temporally dead zone? 
+	What are deep copy and swallow copy? 
+	Difference between relative and absolute path? 
+	What is event Loop in JavaScript 
+	Find the second largest number in array. 
+	Find the largest palindrome in a string. 
+	Tuple can contain two values of different data types.
+	[1, "Steve"];
+	The call, apply and bind methods are NOT suitable for Arrow functions as they were designed to
+	allow methods to execute within different scopes -- because Arrow functions establish "this" based on the scope the Arrow function is defined within.
 
-// let x = { val: 10 };
-// let y = x;
-// y.val = 20;
-// console.log(x.val); // 20 (non-primitive, reference copy)
+HTML
 
-// hoisting
-// console.log("testing: ", testing);
-// var testing;
-// testing = 6;
-// console.log("testing: ", testing);
+CSS 
+	SCSS
+	Library
+	tailwind
+	select (p1,h4)
+	select (p1,h4)
+	background-color
+	color
+	id=> #, class= > .
+	background: #ffffff url("img_tree.png") no-repeat right top;
+	border: 5px solid red;
+	margin: 0 0 50px 0;
+	Opacity / Transparency
+	height, width max n min	
+	boxing model
+	div {
+	  width: 320px;
+	  padding: 10px;
+	  border: 5px solid gray;
+	  margin: 0;
+	}
+	outline offset
+	text
+	display:none(no space)/visibility:hidden(space) block inline
+	position-static relative fixed absolute sticky
+	z-index -behind the text
+	overflow-visible hidden scroll none
+	flote - left right inherite none
+	clear - left right none inherite
+	psedup class- special effect
+	selector:pseudo-class {
+	  property: value;
+	}
+	div:hover {
+	  background-color: blue;
+	}	
+	list - list-style-type,list-style-image, list-style: 
+	table- border-collapse:
+	div, p/div >p,div + p,div ~ p
+	p:first-child 
+	p.highlight(class):hover
+	input:focus
+	p::first-line
+	p::first-letter
+	p::before/after{
+	content:url("smiley.gif")
+	}
+	opacity: 0.4;
+	a[target]
+	a[target="_blank"]
+	[title~="red"] - contains
+	[title^="red"] - starts 
+	[title$="red"] - ends 
+	[title*="red"] - contains 
+	border-bottom-left-radius : 25px- radius
+	background-size: 100px 80px;(width and height)
+	background-size: cover; - fit
+	psudeo class:link:visited:hover:active:focus
+	psudeo element::before::after::first-letter::first-line::selection
+	@font-color: #fff;
+	:host>>>
+	CSS specificity(priority) - Inline styles,IDs,Classes, attributes and pseudo-classes,Elements and pseudo-elements 
+	HTML meta tag - meta charset="UTF-8" and many more
+	cell spacing and cell padding
+	<span style:"display:block"> for inline element add dispaly :block first and later add other style
+	What are pseudo elements and pseudo classes? 
+	CSS specificity(priority) - Inline styles,IDs,Classes, attributes and pseudo-classes,Elements and pseudo-elements
+	HTML meta tag - meta charset="UTF-8" and many more 
+	cell spacing and cell padding
+	<span style:"display:block"> for inline element add dispaly :block first and later add other style
+	What is CSS Specificity? 
+	Inline styles - Example: <h1 style="color: pink;">
+	IDs - Example: #navbar
+	Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+	Elements and pseudo-elements - Example: h1, :before
+	Difference between div and span tags? 
+	Why we use semantic elements? 
+	What are meta tags? 
 
-// function outer() {
-//     let test;
-//     function inner() {
-//         test = 3;
+Authentication and authorization	
+throttling(key stroke diff time 300ms)
+debouncing(api call after 300 ms)	
+closure
+hoisting
+spread operator,rest param
+async pipe
+use strict
+flex , position
+forkJoin
+duplication remove in array n object
+return same object in 2 array
+Responsive
+semantic element html
+event bubbling and capturing:With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+With capturing, the event is first captured by the outermost element and propagated to the inner elements.Capturing is also called "trickling",
+Passing data bw components -> a to b. a to c
+dependency injection
+directive types
+es5 vs es6
+promise vs observables
+let vs const
+lazy loading
+map, reduce, filter
+call vs apply vs bind
+ angular life cycle hooks
+ Responsive design
+ css box model
+ css positions
+ Angular compilers
+ custom pipes/ custom directives
+angular user idel
+lodas
+how to improve application performance
+aot
+    bundlers(parcel)
+	localization
+	lazy loading
+	dark theam
+	interceptors
+	git
+	jeera
+	sonar
+	table(pagination)
+	library
+	agile,scrum,
+	test case
+	What are different build Tools(Docker)
+	Explain about the agile process you follow in your projects
+	How do you handle feature documentation in your current project? What are it’s processes? Do you use storybook?
+	Explain about google type autocomplete? Can we catch http previous response	
 
 
-//         function core() {
+call,apply
+===============
+function myFunc(tx1, tx2){
+return this.name + tx1;
+}
 
+var obj = {name: 'kavya', des: 'SSE'}
+myFunc.call(obj, 'text1', 'text2');
+=====================
+function myFunc(tx1, tx2){
+return this.name + tx1;
+}
 
-//             console.log("test: ", test);
-//             return test;
+var obj = {name: 'kavya', des: 'SSE'}
+myFunc.apply(obj, ['text1', 'text2']);
+==========================
+spread operator/rest param
+
+this.myFunc(1, 3, 4, 5, 2)
+myFunc(...arg){
+} 
+
+rest param
+this.myFunc(1, 3, 4, 5, 2)
+myFunc(num1, num2, ...arg){
+}
+===============================
+given array -> [1, 2, 3, 4, 5]
+ if input 2, expected output -> [[1,2], [3,4], [5]]
+ surprised 1 sad 1
+ if input 3, output -> [[1,2,3],[4,5]]
+if input 4, output -> [[1,2,3,4],[5]]
+=====================================
+ ['LM2500', 'LM6000', 'X-Fleet Aero']
+ 
+ this.listOfData = data.data.bulletins;
+        this.listOfData = this.listOfData.map((item)=>{
+          return {
+            ...item,
+            sortOrder: 'ase'
+          }
+        })
+      });
+	  
+ this.filterbulletinStatus = data.data.bulletinStatus.map(
+          (item: any) => {
+            return {
+              ...item,
+              text: item.value,
+            };
+          }
+        );
+====================================  
+var stre = "Banglore, Mysore, Mandya";
+
+stre = stre.split(',');
+stre = stre.map((item) => {
+  return {
+    item: item,
+    value: item
+  }
+});
+console.log(stre); 
+=====================================
+paths= {1: '1-Prior to start-up', 2: '2-At first'}
+updatePaths = Object.keys(paths).map((key) => {
+          return {
+            access: paths[key].split(','),
+            resources: key
+          }
+        });
+		
+=====================================	
+this.globalService.jwtToken$.next(jwtToken);
+
+ public jwtToken$ = new BehaviorSubject<any>('');
+  jwtToken = this.jwtToken$.asObservable();
+
+this.globalService.jwtToken$.subscribe((data: any) => {
+      if (data) {
+        this.getToken = data;
+        console.log('get', data);
+      }
+    });
+===================================================
+/ let val;
+ const pi = 3.14;
+ function outest(c) {
+   console.log("c", c);
+   function outer(a) {
+     console.log("a", a);
+     function inner(b) {
+       console.log("b", a, b, c);
+     }
+     inner(8);
+   }
+   outer(6);
+ }
+
+ outest(7);
+
+ function add (a) {
+     return function(b){
+         console.log('a  b', a , b)
+       return a + b;
+     }
+   }
+   add(3)(4)
+
+ //   or
+
+   function add (a) {
+     function add1 (b){
+        console.log('a  b', a , b)
+      return a + b;
+    }
+    add1(4)
+  }
+
+  add(3)
+
+ spread operator
+ this.myFunc(0,1, 2, 3, 4, 5, 6);
+ function myFunc(...arg) {
+   console.log("arg index", arg[5]);
+   console.log("arg", arg);
+ }
+
+ rest param
+ function myFunc(arg1, arg2, ...arg) {
+   console.log("arg", arg1, arg2);
+ }
+ =======================
+
+ configData = [
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 1,
+   },
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 2,
+   },
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 2,
+   },
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 1,
+   },
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 2,
+   },
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 2,
+   },
+ ];
+ //remove duplication
+ var res = configData.filter(
+   (c, b, s) => s.findIndex((d) => d.id === c.id) === b
+ );
+ console.log("res", res);
+ =========================
+ // difference in 2 array
+ // Array Object 1
+ const arrayObjOne = [
+   { userId: "1", display: "Jamsheer" },
+   { userId: "2", display: "Muhammed" },
+   { userId: "3", display: "Ravi" },
+   { userId: "4", display: "Ajmal" },
+   { userId: "5", display: "Ryan" },
+ ];
+
+ // Array Object 2
+ const arrayObjTwo = [
+   { empId: "1", display: "Jamsheer", designation: "Jr. Officer" },
+   { empId: "2", display: "Muhammed", designation: "Jr. Officer" },
+   { empId: "3", display: "Ravi", designation: "Sr. Officer" },
+   { empId: "4", display: "Ajmal", designation: "Ast. Manager" },
+ ];
+ // difference in array
+ // const ResultArrayObjOne = arrayObjOne.filter(
+ //   ({ userId: userId }) =>
+ //     !arrayObjTwo.some(({ empId: empId }) => empId === userId)
+ // );
+ // console.log(ResultArrayObjOne);
+
+ // common in Array
+ var common = arrayObjOne.filter(item1 => arrayObjTwo.some(item2 => item1.userId === item2.empId)) // common
+ var dif = arrayObjOne.filter(item1 => !arrayObjTwo.some(item2 => item1.userId === item2.empId)) // difference
+ console.log('common', common)
+ console.log('dif', dif)
+
+ arrays
+ let intersection = arrayObjOne.filter(x => arrayObjTwo.includes(x));
+ console.log('intersection', intersection)
+
+ _.intersection( arrayObjOne ,arrayObjTwo )
+ console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
+
+ ================================
+ configData = [
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 1,
+   },
+   {
+     configDesc: "SMTP mail server(IP address)",
+     configValue: "smtpout.asia.secureserver.net",
+     id: 2,
+   },
+ ];
+ console.log("configData", configData);
+
+ const id = configData.map((res) => res.id);
+ console.log("map", id);
+
+ const results = configData.reduce((acc, pilot) => acc + pilot.id, 0);
+ console.log("reduce", results);
+
+ const firstPilot = configData.find((data) => data.id);
+ console.log('find', firstPilot)
+
+ const fileSize = configData.filter((data) => data.id == 2);
+ console.log('filter', fileSize)
+
+ const listHasPilots = configData.some((data) => data.id == 2);
+ console.log('some', listHasPilots)
+
+ const listHasPilotss = configData.every((data) => data.id == 2);
+ console.log('every', listHasPilotss)
+
+ chapter 2
+ var n = 2;
+
+ function square(num) {
+     var ans = num * num;
+     return ans;
+ }
+ var square2 = square(n);
+ console.log('square2', square2)
+ var square4 = square(4);
+ console.log('square4', square4)
+
+ chapter 3
+ u can access fn and variable before initialization
+ hoisting
+
+ console.log("a", a);
+ console.log("abc", abc);
+
+ // console.log("test", b);
+ function abc() {
+     console.log("inside xyz");
+ }
+ var a = 7;
+ console.log("a", a);
+ console.log("abc", abc);
+
+ chapter 4
+
+ var x = 1;
+ a();
+ b();
+ console.log('x', x)
+
+ function a() {
+     var x = 10;
+     console.log(x);
+ };
+
+ function b() {
+     var x = 100;
+     console.log(x);
+ };
+
+ chapter 7
+ lexical env, scope and scope change
+ function a() {
+     var b = 10;
+     console.log("incide b", b);
+
+     function c() {
+         console.log("incide c", b);
+     }
+     c();
+ }
+ // console.log("incide c", b);
+ a();
+
+ chapter 8
+ var const and let and Temporal Dead Zone
+ console.log('a', a)
+ console.log('d', d)
+ var a
+ var d = 10
+ let b = 20
+
+ const c = 5
+
+ chapter 9
+ closures = fn with lexical env
+
+ function x() {
+     var a = 7;
+
+     function y() {
+         console.log(a);
+     }
+     y();
+     var a = 100;
+     return a
+ }
+ x();
+ console.log("x()", x());
+
+ function z() {
+     var b = 900;
+
+     function x() {
+         var a = 7;
+
+         function y() {
+             console.log(a, b);
+             return a, b
+         }
+         y();
+     }
+     return x();
+ }
+
+ var a = z();
+ console.log('a', a)
+
+ function x() {
+     var i = 1;
+     setTimeout(function x() {
+         console.log(i);
+     }, 3000);
+ }
+ x();
+
+ function outest() {
+     var c = 30
+
+     function outer(b) {
+         var a = 10;
+         // b = 20
+
+         function inner() {
+             console.log(a, b, c);
+         }
+         return inner();
+     }
+     return outer("test1");
+ }
+ var a = 100
+ outest()
+
+ var close = outer();
+ close();
+
+ /
+
+ function parent() {
+     var a = 10;
+
+     function child() {
+         var b = 20;
+
+         function grandChild() {
+             var c = 20;
+             console.log(a, b, c);
+         }
+         return grandChild();
+     }
+     return child();
+ }
+
+ var test = parent()();
+
+ call apply and bind
+
+ let name1 = {
+     fn: "shalu",
+     ln: "gowda",
+ };
+
+ let printname = function(town, state) {
+     console.log(this.fn, this.ln, town, state);
+ };
+ printname.call(name1, 'c', 'd');
+
+ let name2 = {
+     fn: "sha",
+     ln: "gow",
+ };
+
+ //function barrow
+ printname.call(name2, 'a', 'b');
+ printname.apply(name2, ['a', 'b']);
+ let name3 = printname.bind(name2, 'a', 'b');
+ console.log('name', name3)
+
+ name3();
+
+ polyfill
+ let name1 = {
+     fn: "sha",
+     ls: "gowda",
+ };
+
+ let fullName = function(town, sta, cou) {
+     console.log(this.fn, this.ls, town, sta, cou);
+ };
+
+ let namessss = fullName.bind(name1, 'town', 'sta', 'cou');
+ namessss();
+
+ Function.prototype.myBind = function(...args) {
+     let obj = this;
+     params = args.slice(1)
+     return function(...arg2) {
+         obj.apply(args[0], [...params, ...arg2]);
+     };
+ };
+
+ let namess = fullName.myBind(name1, 'town', 'sta', 'cou');
+ namess();
+
+ currying
+ function multiply(a,b){
+     return a*b;
+   }
+
+   function currying(fn){
+     return function(a){
+       return function(b){
+         return fn(a,b);
+       }
+     }
+   }
+
+   var curriedMultiply = currying(multiply);
+
+   multiply(4, 3); // Returns 12
+
+   curriedMultiply(4)(3); // Also returns 12
+
+ 1) bind
+ 2) closure
+
+ 2 closure
+ let multiply = function(x) {
+     return function(y) {
+         console.log(x * y)
+     }
+ }
+
+ let multi = multiply(2)
+ multi(3)
+
+How can I write a Test case for HTTP failure
+https://www.damirscorner.com/blog/posts/20210827-TestingFailingHttpRrequestsInAngular.html
+
+Can we create multiple instances of a Service
+https://stackoverflow.com/questions/48504654/angular-5-create-multiple-instances-of-one-service
+
+Dynamically injecting the Template
+https://stackoverflow.com/questions/58514584/angular-dynamic-template-injection
+
+How to pass data from grandchild to parent
+https://stackoverflow.com/questions/58975892/pass-value-between-grandchild-component-and-parent-component
+
+Content projection?
+https://codecraft.tv/courses/angular/components/content-projection/
+
+Explain about angular routing and navigation? 
+
+Is JS single threaded or Multi-threaded
+Single thread and synchronous
+Singleton Service and how we achieve singleton design pattern in Angular application 
+
+What happens to TS Classes once they are compiled to JS
+https://medium.com/jspoint/typescript-compilation-the-typescript-compiler-4cb15f7244bc  
+
+extends vs implements
+https://www.geeksforgeeks.org/extends-vs-implements-in-java/
+
+What is Abstract Method in TS?
+What are Interfaces in TS?
+
+How can I achieve Inheritance in JS
+JavaScript inheritance is done through prototypes
+https://www.javascripttutorial.net/es6/javascript-inheritance/
+
+How to handle global errors? 
+The global error handler middleware is used catch all exceptions thrown by the api in a single place, 
+removing the need for duplicated error handling code throughout the application
+
+Who keeps track of setTimeout event if JS is single threaded
+
+Flex layout
+stackblitz.com/edit/flex?file=app%2Fapp.component.html
+Root injector  
+
+showdo n deep copy
+
+ng-template vs ng-container
+stackoverflow.com/questions/40529537/ng2-difference-between-ng-container-and-ng-template-tags
+
+TDD- write test case before writing code(test cases first approch)
+changeDetection
+Change Detection means updating the view (DOM) when the data has changed.
+https://www.thirdrocktechkno.com/blog/how-angular-change-detection-works/
+
+A singleton service is a service for which only one instance exists in an application.
+
+Security in Angular
+cross-site scripting (XSS),Sanitization and security contexts,Direct use of the DOM APIs and explicit sanitization calls,
+Trusting safe values,Content security policy,Enforcing Trusted Types,
+Use the AOT template compiler,HTTP-level vulnerabilities
+
+Providers in component and ngModule difference and usage
+
+How to do find the error is server error?   
+How do change request before send to server?
+Difference of SVG & Canvas? 
+================
+datatable filter in entire column
+filterItems: function (tableData, query) {
+      const lowerCaseQuery = query.toLowerCase()
+      return tableData.filter(task => {
+        return Object.values(task)
+          .some(value => ('' + value).toLowerCase().includes(lowerCaseQuery))
+      })
+    }
+datatable column based filter
+ filterItems: function (arr, query) {
+      return arr.filter((item) => {
+        const matchValues = {
+          sbName: (item.sbName || '').toLowerCase(),
+          sbNumber: (item.sbNumber || '').toLowerCase(),
+          status: (item.status || '').toLowerCase(),
+          engineModel: (item.engineModel || '').toLowerCase()
+        }
+        return Object.keys(query).every((key) =>
+          matchValues[key].includes((query[key] || '').toLowerCase())
+        )
+      })
+    }
+================
+// creating a promise
+
+// function promiseCreation(name){
+//   const pr = new Promise(
+//     function(resolve, reject){
+//         let test = {
+//           status: 200,
+//           data: 'https://api.github.com/users/'+ name,
+
 //         }
-//         return core();
+//         if(test.status===200){
+//           resolve(test.data)
+//         } else{
+//           const err = new Error("error in api")
+//           reject(err)
+//         }
 //     }
-//     return inner();
-// }
-// console.log("outer(): ", outer());
-
-// Immediately Invoked Function Expression (IIFE)
-// (function () {
-//   console.log("IIFE runs immediately!");
-// })();
-
-// = “ (compare values) and “ === “(both value and types)
-// let test = 3;
-// let testing = "3";
-
-// console.log("test == testing: ", test === testing);
-
-// call apply and bind
-// let name = {
-//     fn: 'Shalini',
-//     ls: 'M'
+//   )
+//   return pr
 // }
 
-// function fullName(town, place) {
-//     console.log(this.ls, this.fn, town , place);
+// // consuming of the promise
+// const prResult = promiseCreation('shalinishalu23')
+// console.log('prResult: ', prResult)
+// prResult
+// .then(function(data){
+//   console.log('data: ', data)
+//   fetch(data).then(function(test){
+//     console.log('test: ', test)
+//   })
+// })
+// .then(console.log('call another fn'))
+// .catch(function(err){
+// console.log(err.message);
+// })
 
+
+// async await
+// always return promise
+
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('p1 resolve')
+  }, 5000)
+})
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('p2 resolve')
+  }, 10000)
+})
+
+// // with async await 
+// async function getData() {
+//   try {
+//     console.log('log1');
+//     await p1.then(res => console.log(res))
+//     console.log('log2');
+//     await p2.then(res => console.log(res))
+//     console.log('log3');
+//   }
+//   catch (err) {
+//     console.log('err: ', err);
+//   }
 // }
-// fullName.call (name, 'KA', 'Mysore')
-// fullName.apply(name, ['KA', 'Mysore'])
-// const test = fullName.bind(name, 'KA', 'Mysore')
-// console.log('test: ', test);
 
-// call back fun
-// function greet(name, callback) {
-//   console.log("Hello, " + name + "!");
-//   callback();
-// }
+// without async await , its just promise
+function getData() {
+  console.log('log1');
+  p1.then(res => console.log(res))
+  console.log('log2');
+  p2.then(res => console.log(res))
+  console.log('log3');
+}
+getData()
+============================
+function debounce(func, delay) {
+    console.log('debounce: ')
+    let timeoutId;
 
-// function sayGoodbye() {
-//   console.log("Goodbye!");
-// }
+    return function() {
+        const context = this;
+        const args = arguments;
 
-// greet("Alice", sayGoodbye);
-// // Output:
-// // Hello, Alice!
-// // Goodbye!
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            console.log('timeoutId: ', timeoutId)
+            func.apply(context, args);
+        }, delay);
+    };
+}
 
+function apiCall() {
+    console.log('API called');
+}
 
-// setTimeout(() => {
-//     console.log('3000: ')
-// }, 3000);
-
-// setInterval(() => {
-//     date = new Date()
-//     console.log('date: ', date)
-// }, 1000);
-
-
-// A WebSocket is a protocol that enables two-way, persistent communication between a client and a server
-// WebSockets allow real-time data transfer with less overhead.
-// const socket = new WebSocket('wss://ws.ifelse.io')
-
-// socket.onopen = function(){
-//   console.log('WebSocket connection opened');
-//   socket.send('Hello, server!');
-// }
-// socket.onclose = function(){
-//   console.log('WebSocket connection closed');
-// }
-// socket.onerror = function(error){
-//     console.log('error: ', error);
-// }
-// socket.onmessage = function(event){
-//     console.log('event: ', event.data)
-// }
+const debouncedApiCall = debounce(apiCall, 2000);
+=====================
+const targetRoute = { name: 'communication', params: { comNum: processId } }
+        const currentRoute = router
+        if (
+          currentRoute.name !== targetRoute.name ||
+          currentRoute.params.comNum !== targetRoute.params.comNum
+        ) {
+          router.push(targetRoute)
+        }
+=========================
