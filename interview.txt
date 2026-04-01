@@ -227,6 +227,14 @@ JS
 	[1, "Steve"];
 	The call, apply and bind methods are NOT suitable for Arrow functions as they were designed to
 	allow methods to execute within different scopes -- because Arrow functions establish "this" based on the scope the Arrow function is defined within.
+	event capturing, event bubling, event delegation 
+	spread operator, rest param, memorization 
+    lexical env,const and let and Temporal Dead Zone 
+	array function , deep clone , shadow clone 
+	prototyping ,pollyfill
+	SetTimeout and setintervals, setImmediate
+    ES6
+	promises, async await
 
 HTML
 
@@ -527,6 +535,35 @@ Call Once Function
 DOM Tree Flattening / Serialization
 Chunk an Array into Groups
 Infinite Scroll Loader Simulation
+
+event loop
+throttle, debouncing,
+flatMap without looping
+useForwardRef
+useTransition
+web vitals
+react portals
+Tuples
+Ovbject.freez()
+object. Entries()
+web workers 
+responsive vs adaptive 
+Mobile first Approach
+prototype chaining 
+ 
+Patter
+Singleton
+factory
+decorative
+observer patterns
+strategic
+ 
+SOLID
+Single Reprosenting Principle
+Open/Close Principle
+Liskov Substitutional Principle
+Interface Segregation Principle
+Dipendency Injection principle
 
 
 How can I write a Test case for HTTP failure
