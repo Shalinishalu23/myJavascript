@@ -40,15 +40,15 @@ angular
 	ngAfterViewChecked: Is called after every check of a component’s views.
 	ngOnDestroy: Is called just before the directive is destroyed.
 	Compilation-In JIT compilation, the application compiles inside the browser during runtime.Whereas in the AOT compilation, the application compiles during the build time.
-	Data-binding-one-way(interpolation{{}},propery binding[],event bindin(click()) and two-way binding[(ngModel)]=''.
-	Promise((resolve, reject)then asyn and await asynchronous, 
+	Data-binding-one-way(interpolation{{}},propery binding[],event bindin(click()) and two-way binding[(ngModel)]=''.)
+	Promise((resolve, reject)then asyn and await asynchronous)
 	Directive(ACS)(Component--selector,decorator,template/ Structural-*ngIf and *ngFor / Attribute- ng class , ng style)
 	server-side called Angular Universal,
 	share data between components -- @Input,@Output() backBoolean = new EventEmitter(); , emit,  @ViewChild(ChildComponent,{static:false}) child; service,BehaviorSubject
     @ViewChild('tt') in html(to access template element with eleRef)
-	Dependency Injection(creating service and inject in to component and have dependency in component
+	Dependency Injection(creating service and inject in to component and have dependency in component)
 	MVVM
-	metadata(used to decorate,1.class dec-@component, @ngmododule,2. property dec -@input , @output 3.method dec @hostlistener 4.parameter dec @inject(to inject service)
+	metadata(used to decorate,1.class dec-@component, @ngmododule,2. property dec -@input , @output 3.method dec @hostlistener 4.parameter dec @inject(to inject service))
 	| async to get latest value		
 	Lazy loading	
     ng g m home --route home --module app.module
@@ -71,7 +71,7 @@ angular
 	pipes(it helps to transform data and manage data within interpolation by {{ | }})
 	A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe.
     An impure pipe is called for every change detection cycle no matter whether the value or parameter(s) changes
-	Forms(Template(FormsModule, #userName="ngForm",ngModel ) and reactive(ReactiveFormsModule,[formGroup]="formdata",FormControl,FormArray)
+	Forms(Template(FormsModule, #userName="ngForm",ngModel ) and reactive(ReactiveFormsModule,[formGroup]="formdata",FormControl,FormArray))
 	angular.json "styles": [  
     "./node_modules/bootstrap/dist/css/bootstrap.min.css",  
     "src/styles.css"  ],  
@@ -554,7 +554,7 @@ CSS
 	WebSockets allow real-time data transfer with less overhead.
 	web worker
 	https://www.freecodecamp.org/news/how-webworkers-work-in-javascript-with-example/
-	=========================
+
 	this.globalService.jwtToken$.next(jwtToken);
 
 	 public jwtToken$ = new BehaviorSubject<any>('');
@@ -589,8 +589,7 @@ CSS
 			)
 		})
 		}
-	const uniqueChars = [...new Set([...str])];
-	console.log(uniqueChars);
+
 	========================
 
 	Developed a secure and scalable front-end application using Vue.js, following component-based architecture and enterprise development standards. 
