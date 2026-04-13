@@ -172,69 +172,64 @@ JS
 	First class function-  functions are treated like any other variable	
 	call back function a function passed as an argument into another function, intended to be executed ("called back") later, either immediately (synchronously) or after an asynchronous operation completes.
 	Event Queue, Event loop, call Stack, event propagation
-	Higher order function- take functions as an arg 
-	array methods , operatives(map(), .filter(), .reduce(accumulator, pilot) ,some()-> boolean, .every() ->check every ele, find(),fill)
-
-
-	IIFE (Immediately Invoked Function Expression)
-	Primitive(string int bigint boolean and passed by value ) and non primitive(obj passed by reference)
-	“ == “ (compare values) and “ === “(both value and types)
 	Higher Order Functions-Functions that operate on other functions, either by taking them as arguments or by returning them, are called so
-	call()-sayHello.call(obj), .apply() when you want to invoke the function immediately, and modify the context and, bind()(bind return function ), 
+	allow methods to execute within different scopes -- because Arrow functions establish "this" based on the scope the Arrow function is defined within. 
+	array methods , operatives(map(), .filter(), .reduce(accumulator, pilot) ,some()-> boolean, .every() ->check every ele, find(),fill)
+	call(obj) .apply() when you want to invoke the function immediately, and modify the context and, bind()(bind return function ), 
 	Use .bind() when you want that function to later be called with a certain context, useful in events. these methods are NOT suitable for Arrow functions as they were designed to
-	allow methods to execute within different scopes -- because Arrow functions establish "this" based on the scope the Arrow function is defined within.
+	(IIFE) (Immediately Invoked Function Expression)
+	“ == “ (compare values) and “ === “(both value and types)
+	spread operator, rest param,   
+	memoization -a performance optimization technique in JavaScript that speeds up applications by caching the results of expensive function calls and returning the cached result when the same inputs occur again
+
+
+
+	Primitive(string int bigint boolean and passed by value ) and non primitive(obj passed by reference)
 	callbacks- A callback is a function that will be executed after another function gets executed.
 	promise => is an object representing eventual completion or failure of the async operation
 	promise vs observables
+	Create a Promise.all
 	debouncing - if keystroke b/w words 300s time
 	throttling - call api b/w every 300s time
-	polyfill,web socket
+	polyfill
 	event bubbling and capturing:With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
     With capturing, the event is first captured by the outermost element and propagated to the inner elements.Capturing is also called "trickling",
 	forkJoin will wait for all passed observables to emit and complete and then it will emit an array or an object with last values from corresponding observables.
 	currying -if we have a function f(a,b) , then the function after currying, will be transformed to f(a)(b).
-	slice(modify shollow array),splice(modify original array)
+	slice(modify shallow array),splice(modify original array)
 	JS 
 	What are ES6 concepts in JavaScript? 		
 	es5 vs es6  
 	asynchronous behavior
-	pollyfill
 	prototype chaining and advantage 
 	Inheritance the properties and the methods , we can change the behaviour of it
 	advantage it is only stored in the memory once, but every instance of the object has access to it
-	web worker
-	https://www.freecodecamp.org/news/how-webworkers-work-in-javascript-with-example/
+	
 	window and document object in javascript
 	What is Gulp and Grunt
 	gulp and Grunt are task runners. They are different approaches to same problem. Grunt uses configuration based approach, 
 	while gulp uses streams from node to achieve result. You use them to define how and which tasks to execute 
 	(copying files, adding banners, replacing text, style checking, etc...)
-	What are deep copy and swallow copy? 
-	Difference between relative and absolute path? 
-	Find the second largest number in array. 
-	Find the largest palindrome in a string. 
+	What are Deep Clone an Object (without JSON.stringify) , shadow clone  
 	Tuple can contain two values of different data types.
 	[1, "Steve"];
-	event capturing, event bubling, event delegation 
-	spread operator, rest param, memorization 
-	array function , Deep Clone an Object (without JSON.stringify) , shadow clone 
+	event capturing, event bubbling, event delegation 
+	array function , 
 	SetTimeout and setIntervals, setImmediate
 	promises, async await
 	Custom Promise Implementation (Basic)
 	Limit Concurrent Promises (Concurrency Control)
 	Sequential vs Parallel Promise Execution
-	Retry a Failed Request with Delay
 	Implement sleep(ms) using Promises
-	Debounce vs Throttle Implementation
-	Currying a Function
+	Retry a Failed Request with Delay
 	Flatten a Nested Array/Object
-	Memoization Function Implementation
-	Create a Promise.all Polyfill
 	Chained Sum Function (e.g., sum(1)(2)(3)() returns 6)
 	Event Delegation Implementation
 	use strict
 	duplication remove in array n object
 	return same object in 2 array
+	Find the second largest number in array. 
+	Find the largest palindrome in a string. 
 
 HTML
     semantic and non semantic
@@ -557,6 +552,8 @@ CSS
 
 	A WebSocket is a protocol that enables two-way, persistent communication between a client and a server
 	WebSockets allow real-time data transfer with less overhead.
+	web worker
+	https://www.freecodecamp.org/news/how-webworkers-work-in-javascript-with-example/
 	=========================
 	this.globalService.jwtToken$.next(jwtToken);
 

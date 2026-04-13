@@ -141,19 +141,11 @@
 // map, filter and reduce chapter 19
 
 
-
 // call apply and bind
-
-// let name1 = {
-//     fn: "shalu",
-//     ln: "gowda",
-// };
 
 // let printname = function(town, state) {
 //     console.log(this.fn, this.ln, town, state);
 // };
-// printname.call(name1, 'c', 'd');
-
 // let name2 = {
 //     fn: "sha",
 //     ln: "gow",
@@ -167,29 +159,35 @@
 
 // name3();
 
-// polyfill
-// let name1 = {
-//     fn: "sha",
-//     ls: "gowda",
-// };
+// Immediately Invoked Function Expression (IIFE)
+// (function () {
+//   console.log("IIFE runs immediately!");
+// })();
+// function iife() {
+//   console.log("normal fn");
+// }
+// iife()
 
-// let fullName = function(town, sta, cou) {
-//     console.log(this.fn, this.ls, town, sta, cou);
-// };
+// = “ (compare values) and “ === “(both value and types)
+// let test = 3;
+// let testing = "3";
 
-// let namessss = fullName.bind(name1, 'town', 'sta', 'cou');
-// namessss();
+// console.log("test == testing: ", test === testing);
 
-// Function.prototype.myBind = function(...args) {
-//     let obj = this;
-//     params = args.slice(1)
-//     return function(...arg2) {
-//         obj.apply(args[0], [...params, ...arg2]);
-//     };
-// };
+// spread operator
+// this.myFunc(0,1, 2, 3, 4, 5, 6);
+// function myFunc(...arg) {
+//   console.log("arg index", arg[5]);
+//   console.log("arg", arg);
+// }
 
-// let namess = fullName.myBind(name1, 'town', 'sta', 'cou');
-// namess();
+// rest param
+// function myFunc(arg1, arg2, ...arg) {
+//   console.log("arg", arg1, arg2, arg); // []
+//   console.log("arg", arg1, arg2, ...arg);
+// }
+
+
 
 // currying
 // function multiply(a,b){
@@ -376,17 +374,7 @@
 
 //  add(3)
 
-// spread operator
-// this.myFunc(0,1, 2, 3, 4, 5, 6);
-// function myFunc(...arg) {
-//   console.log("arg index", arg[5]);
-//   console.log("arg", arg);
-// }
 
-// rest param
-// function myFunc(arg1, arg2, ...arg) {
-//   console.log("arg", arg1, arg2);
-// }
 // =======================
 
 
@@ -662,141 +650,6 @@
 // }))
 // console.log('testing: ', result)
 
-// ES6
-// Arrow Functions
-// const add = (a, b) => a + b;
-// const greet = name => `Hello ${name}`;
-
-// var a = 7;
-// console.log("7", 7);
-// function add() {
-//   console.log("add fn called");
-// }
-// add()
-// let val;
-// const pi = 3.14;
-// function outest(c) {
-//   console.log("c", c);
-//   function outer(a) {
-//     console.log("a", a);
-//     function inner(b) {
-//       console.log("b", a, b, c);
-//     }
-//     inner(8);
-//   }
-//   outer(6);
-// }
-
-// outest(7);
-
-// function add (a) {
-//     return function(b){
-//         console.log('a  b', a , b)
-//       return a + b;
-//     }
-//   }
-//   add(3)(4)
-
-// //   or
-
-//   function add (a) {
-//     function add1 (b){
-//        console.log('a  b', a , b)
-//      return a + b;
-//    }
-//    add1(4)
-//  }
-
-//  add(3)
-
-// spread operator
-// this.myFunc(0,1, 2, 3, 4, 5, 6);
-// function myFunc(...arg) {
-//   console.log("arg index", arg[5]);
-//   console.log("arg", arg);
-// }
-
-// rest param
-// function myFunc(arg1, arg2, ...arg) {
-//   console.log("arg", arg1, arg2);
-// }
-// =======================
-
-// configData = [
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-// ];
-// //remove duplication
-// var res = configData.filter(
-//   (c, b, s) => s.findIndex((d) => d.id === c.id) === b
-// );
-// console.log("res", res);
-// =========================
-// // difference in 2 array
-// // Array Object 1
-// const arrayObjOne = [
-//   { userId: "1", display: "Jamsheer" },
-//   { userId: "2", display: "Muhammed" },
-//   { userId: "3", display: "Ravi" },
-//   { userId: "4", display: "Ajmal" },
-//   { userId: "5", display: "Ryan" },
-// ];
-
-// // Array Object 2
-// const arrayObjTwo = [
-//   { empId: "1", display: "Jamsheer", designation: "Jr. Officer" },
-//   { empId: "2", display: "Muhammed", designation: "Jr. Officer" },
-//   { empId: "3", display: "Ravi", designation: "Sr. Officer" },
-//   { empId: "4", display: "Ajmal", designation: "Ast. Manager" },
-// ];
-// // difference in array
-// // const ResultArrayObjOne = arrayObjOne.filter(
-// //   ({ userId: userId }) =>
-// //     !arrayObjTwo.some(({ empId: empId }) => empId === userId)
-// // );
-// // console.log(ResultArrayObjOne);
-
-// // common in Array
-// var common = arrayObjOne.filter(item1 => arrayObjTwo.some(item2 => item1.userId === item2.empId)) // common
-// var dif = arrayObjOne.filter(item1 => !arrayObjTwo.some(item2 => item1.userId === item2.empId)) // difference
-// console.log('common', common)
-// console.log('dif', dif)
-
-// arrays
-// let intersection = arrayObjOne.filter(x => arrayObjTwo.includes(x));
-// console.log('intersection', intersection)
-
-// _.intersection( arrayObjOne ,arrayObjTwo )
-// console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
-
 // ================================
 // // undefined and undeclared
 // console.log('testing: ', testing) //undefined
@@ -833,32 +686,6 @@
 // y.val = 20;
 // console.log(x.val); // 20 (non-primitive, reference copy)
 
-
-// Immediately Invoked Function Expression (IIFE)
-// (function () {
-//   console.log("IIFE runs immediately!");
-// })();
-
-// = “ (compare values) and “ === “(both value and types)
-// let test = 3;
-// let testing = "3";
-
-// console.log("test == testing: ", test === testing);
-
-// call apply and bind
-// let name = {
-//     fn: 'Shalini',
-//     ls: 'M'
-// }
-
-// function fullName(town, place) {
-//     console.log(this.ls, this.fn, town , place);
-
-// }
-// fullName.call (name, 'KA', 'Mysore')
-// fullName.apply(name, ['KA', 'Mysore'])
-// const test = fullName.bind(name, 'KA', 'Mysore')
-// console.log('test: ', test);
 
 
 
