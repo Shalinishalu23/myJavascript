@@ -1,198 +1,6 @@
-// var a = 7;
-// console.log("7", 7);
-// function add() {
-//   console.log("add fn called");
-// }
-// add()
-// let val;
-// const pi = 3.14;
-// function outest(c) {
-//   console.log("c", c);
-//   function outer(a) {
-//     console.log("a", a);
-//     function inner(b) {
-//       console.log("b", a, b, c);
-//     }
-//     inner(8);
-//   }
-//   outer(6);
-// }
+// JS Ep.2 Execution context 
 
-// outest(7);
-
-// function add (a) {
-//     return function(b){
-//         console.log('a  b', a , b)
-//       return a + b;
-//     }
-//   }
-//   add(3)(4)
-
-// //   or
-
-//   function add (a) {
-//     function add1 (b){
-//        console.log('a  b', a , b)
-//      return a + b;
-//    }
-//    add1(4)
-//  }
-
-//  add(3)
-
-// spread operator
-// this.myFunc(0,1, 2, 3, 4, 5, 6);
-// function myFunc(...arg) {
-//   console.log("arg index", arg[5]);
-//   console.log("arg", arg);
-// }
-
-// rest param
-// function myFunc(arg1, arg2, ...arg) {
-//   console.log("arg", arg1, arg2);
-// }
-// =======================
-
-// configData = [
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-// ];
-
-// let id1 = configData.map(data => data.id)
-// let id2 = configData.filter(data => data.id==2)
-// let id3= configData.find(data => data.id==2)
-// let id4 = configData.some(data => data.id==2)
-// let id5= configData.every(data => data.id==2)
-// let id6= configData.reduce((acc, pilot) => acc + pilot.id, 0)
-// console.log('id1: ', id1)
-// console.log('id2: ', id2)
-// console.log('id3: ', id3);
-// console.log('id4: ', id4);
-// console.log('id5: ', id5);
-// console.log('id6: ', id6);
-
-// configData = [
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-// ];
-// //remove duplication
-// var res = configData.filter(
-//   (c, b, s) => s.findIndex((d) => d.id === c.id) === b
-// );
-// console.log("res", res);
-// =========================
-// // difference in 2 array
-// // Array Object 1
-// const arrayObjOne = [
-//   { userId: "1", display: "Jamsheer" },
-//   { userId: "2", display: "Muhammed" },
-//   { userId: "3", display: "Ravi" },
-//   { userId: "4", display: "Ajmal" },
-//   { userId: "5", display: "Ryan" },
-// ];
-
-// // Array Object 2
-// const arrayObjTwo = [
-//   { empId: "1", display: "Jamsheer", designation: "Jr. Officer" },
-//   { empId: "2", display: "Muhammed", designation: "Jr. Officer" },
-//   { empId: "3", display: "Ravi", designation: "Sr. Officer" },
-//   { empId: "4", display: "Ajmal", designation: "Ast. Manager" },
-// ];
-// // difference in array
-// // const ResultArrayObjOne = arrayObjOne.filter(
-// //   ({ userId: userId }) =>
-// //     !arrayObjTwo.some(({ empId: empId }) => empId === userId)
-// // );
-// // console.log(ResultArrayObjOne);
-
-// // common in Array
-// var common = arrayObjOne.filter(item1 => arrayObjTwo.some(item2 => item1.userId === item2.empId)) // common
-// var dif = arrayObjOne.filter(item1 => !arrayObjTwo.some(item2 => item1.userId === item2.empId)) // difference
-// console.log('common', common)
-// console.log('dif', dif)
-
-// arrays
-// let intersection = arrayObjOne.filter(x => arrayObjTwo.includes(x));
-// console.log('intersection', intersection)
-
-// _.intersection( arrayObjOne ,arrayObjTwo )
-// console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
-
-// ================================
-// configData = [
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-// ];
-// console.log("configData", configData);
-
-// const id = configData.map((res) => res.id);
-// console.log("map", id);
-
-// const results = configData.reduce((acc, pilot) => acc + pilot.id, 0);
-// console.log("reduce", results);
-
-// const firstPilot = configData.find((data) => data.id);
-// console.log('find', firstPilot)
-
-// const fileSize = configData.filter((data) => data.id == 2);
-// console.log('filter', fileSize)
-
-// const listHasPilots = configData.some((data) => data.id == 2);
-// console.log('some', listHasPilots)
-
-// const listHasPilotss = configData.every((data) => data.id == 2);
-// console.log('every', listHasPilotss)
-
-// const id1 = configData.findIndex(item => item.id ===2 )
-// console.log('id1: ', id1);
-
-// chapter 2
 // var n = 2;
-
 // function square(num) {
 //     var ans = num * num;
 //     return ans;
@@ -202,23 +10,22 @@
 // var square4 = square(4);
 // console.log('square4', square4)
 
-// chapter 3
+// chapter 3  hoisting
 // u can access fn and variable before initialization
-// hoisting
 
 // console.log("a", a);
 // console.log("abc", abc);
 
 // // console.log("test", b);
 // function abc() {
-//     console.log("inside xyz");
+//     console.log("inside abc");
 // }
 // var a = 7;
 // console.log("a", a);
 // console.log("abc", abc);
 
 // chapter 4
-
+// Local variable and global 
 // var x = 1;
 // a();
 // b();
@@ -238,14 +45,14 @@
 // lexical env, scope and scope change
 // function a() {
 //     var b = 10;
-//     console.log("incide b", b);
+//     console.log("inside b", b);
 
 //     function c() {
-//         console.log("incide c", b);
+//         console.log("inside c", b);
 //     }
 //     c();
 // }
-// // console.log("incide c", b);
+// // console.log("inside c", b);
 // a();
 
 // chapter 8
@@ -258,69 +65,15 @@
 
 // const c = 5
 
-// chapter 9
+// chapter 9 block, scope and shadowing 
+// {
+// var a= 10
+// let b =100
+// const c = 1000
+// }
+
+// chapter 10
 // closures = fn with lexical env
-
-// function x() {
-//     var a = 7;
-
-//     function y() {
-//         console.log(a);
-//     }
-//     y();
-//     var a = 100;
-//     return a
-// }
-// x();
-// console.log("x()", x());
-
-// function z() {
-//     var b = 900;
-
-//     function x() {
-//         var a = 7;
-
-//         function y() {
-//             console.log(a, b);
-//             return a, b
-//         }
-//         y();
-//     }
-//     return x();
-// }
-
-// var a = z();
-// console.log('a', a)
-
-// function x() {
-//     var i = 1;
-//     setTimeout(function x() {
-//         console.log(i);
-//     }, 3000);
-// }
-// x();
-
-// function outest() {
-//     var c = 30
-
-//     function outer(b) {
-//         var a = 10;
-//         // b = 20
-
-//         function inner() {
-//             console.log(a, b, c);
-//         }
-//         return inner();
-//     }
-//     return outer("test1");
-// }
-// var a = 100
-// outest()
-
-// var close = outer();
-// close();
-
-// /
 
 // function parent() {
 //     var a = 10;
@@ -338,6 +91,56 @@
 // }
 
 // var test = parent()();
+
+// first class function chapter 13
+//  functions are treated like any other variable	
+
+// function greeting(test){
+//     console.log('test: ', test);
+//     return function (){
+
+//     }
+
+// }
+// const test = function fullName(){
+// }
+// greeting(test)
+// const test  = () => {
+//     console.log('inside arrow fn');
+// }
+// test()
+
+// call back fun
+// function greet(name, callback) {
+//   console.log("Hello, " + name + "!");
+//   callback();
+// }
+
+// function sayGoodbye() {
+//   console.log("Goodbye!");
+// }
+
+// greet("Alice", sayGoodbye);
+// // Output:
+// // Hello, Alice!
+// // Goodbye!
+
+// Event loop chapter 15
+
+// Higher order function chapter 18
+
+// function fullName(){
+// console.log('inside full name: ');
+// }
+// function greeting(callBack){
+//     callBack()
+// }
+
+// greeting(fullName)
+
+// map, filter and reduce chapter 19
+
+
 
 // call apply and bind
 
@@ -407,29 +210,6 @@
 
 //   curriedMultiply(4)(3); // Also returns 12
 
-// 1) bind
-// 2) closure
-
-// 2 closure
-// let multiply = function(x) {
-//     return function(y) {
-//         console.log(x * y)
-//     }
-// }
-
-// let multi = multiply(2)
-// multi(3)
-
-//call back
-
-// function x(y){
-//   console.log('inside x')
-//   y()
-// }
-
-// x(function y(){
-//   console.log('inside y');
-// })
 
 //promise
 
@@ -575,6 +355,151 @@
 
 // const receipent = Array.from(new Set([str1, str2,str3, str4, str5].filter(Boolean))).join(',')
 // console.log('receipent: ', receipent)
+
+// function add (a) {
+//     return function(b){
+//         console.log('a  b', a , b)
+//       return a + b;
+//     }
+//   }
+//   add(3)(4)
+
+// //   or
+
+//   function add (a) {
+//     function add1 (b){
+//        console.log('a  b', a , b)
+//      return a + b;
+//    }
+//    add1(4)
+//  }
+
+//  add(3)
+
+// spread operator
+// this.myFunc(0,1, 2, 3, 4, 5, 6);
+// function myFunc(...arg) {
+//   console.log("arg index", arg[5]);
+//   console.log("arg", arg);
+// }
+
+// rest param
+// function myFunc(arg1, arg2, ...arg) {
+//   console.log("arg", arg1, arg2);
+// }
+// =======================
+
+
+// configData = [
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+// ];
+// //remove duplication
+// var res = configData.filter(
+//   (c, b, s) => s.findIndex((d) => d.id === c.id) === b
+// );
+// console.log("res", res);
+// =========================
+// // difference in 2 array
+// // Array Object 1
+// const arrayObjOne = [
+//   { userId: "1", display: "Jamsheer" },
+//   { userId: "2", display: "Muhammed" },
+//   { userId: "3", display: "Ravi" },
+//   { userId: "4", display: "Ajmal" },
+//   { userId: "5", display: "Ryan" },
+// ];
+
+// // Array Object 2
+// const arrayObjTwo = [
+//   { empId: "1", display: "Jamsheer", designation: "Jr. Officer" },
+//   { empId: "2", display: "Muhammed", designation: "Jr. Officer" },
+//   { empId: "3", display: "Ravi", designation: "Sr. Officer" },
+//   { empId: "4", display: "Ajmal", designation: "Ast. Manager" },
+// ];
+// // difference in array
+// // const ResultArrayObjOne = arrayObjOne.filter(
+// //   ({ userId: userId }) =>
+// //     !arrayObjTwo.some(({ empId: empId }) => empId === userId)
+// // );
+// // console.log(ResultArrayObjOne);
+
+// // common in Array
+// var common = arrayObjOne.filter(item1 => arrayObjTwo.some(item2 => item1.userId === item2.empId)) // common
+// var dif = arrayObjOne.filter(item1 => !arrayObjTwo.some(item2 => item1.userId === item2.empId)) // difference
+// console.log('common', common)
+// console.log('dif', dif)
+
+// arrays
+// let intersection = arrayObjOne.filter(x => arrayObjTwo.includes(x));
+// console.log('intersection', intersection)
+
+// _.intersection( arrayObjOne ,arrayObjTwo )
+// console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
+
+// ================================
+// configData = [
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 1,
+//   },
+//   {
+//     configDesc: "SMTP mail server(IP address)",
+//     configValue: "smtpout.asia.secureserver.net",
+//     id: 2,
+//   },
+// ];
+// console.log("configData", configData);
+
+// const id = configData.map((res) => res.id);
+// console.log("map", id);
+
+// const results = configData.reduce((acc, pilot) => acc + pilot.id, 0);
+// console.log("reduce", results);
+
+// const firstPilot = configData.find((data) => data.id);
+// console.log('find', firstPilot)
+
+// const fileSize = configData.filter((data) => data.id == 2);
+// console.log('filter', fileSize)
+
+// const listHasPilots = configData.some((data) => data.id == 2);
+// console.log('some', listHasPilots)
+
+// const listHasPilotss = configData.every((data) => data.id == 2);
+// console.log('every', listHasPilotss)
+
+// const id1 = configData.findIndex(item => item.id ===2 )
+// console.log('id1: ', id1);
 
 // 5 => 5+4+3+2+1
 // function sum (num){
@@ -808,36 +733,6 @@
 //     configValue: "smtpout.asia.secureserver.net",
 //     id: 2,
 //   },
-// ];
-
-// let id1 = configData.map(data => data.id)
-// let id2 = configData.filter(data => data.id==2)
-// let id3= configData.find(data => data.id==2)
-// let id4 = configData.some(data => data.id==2)
-// let id5= configData.every(data => data.id==2)
-// let id5= configData.slice(0,5)
-// let id5= configData.splice(0,8)
-// let id5= configData.shift()
-// let id5= configData.unshift(12)
-// let id6= configData.reduce((acc, pilot) => acc + pilot.id, 0)
-// console.log('id1: ', id1)
-// console.log('id2: ', id2)
-// console.log('id3: ', id3);
-// console.log('id4: ', id4);
-// console.log('id5: ', id5);
-// console.log('id6: ', id6);
-
-// configData = [
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
 //   {
 //     configDesc: "SMTP mail server(IP address)",
 //     configValue: "smtpout.asia.secureserver.net",
@@ -903,41 +798,6 @@
 // console.log('_.intersection( arrayObjOne ,arrayObjTwo )', _.intersection( arrayObjOne ,arrayObjTwo ))
 
 // ================================
-// configData = [
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 1,
-//   },
-//   {
-//     configDesc: "SMTP mail server(IP address)",
-//     configValue: "smtpout.asia.secureserver.net",
-//     id: 2,
-//   },
-// ];
-// console.log("configData", configData);
-
-// const id = configData.map((res) => res.id);
-// console.log("map", id);
-
-// const results = configData.reduce((acc, pilot) => acc + pilot.id, 0);
-// console.log("reduce", results);
-
-// const firstPilot = configData.find((data) => data.id);
-// console.log('find', firstPilot)
-
-// const fileSize = configData.filter((data) => data.id == 2);
-// console.log('filter', fileSize)
-
-// const listHasPilots = configData.some((data) => data.id == 2);
-// console.log('some', listHasPilots)
-
-// const listHasPilotss = configData.every((data) => data.id == 2);
-// console.log('every', listHasPilotss)
-
-// const id1 = configData.findIndex(item => item.id ===2 )
-// console.log('id1: ', id1);
-
 // // undefined and undeclared
 // console.log('testing: ', testing) //undefined
 // var testing
@@ -973,29 +833,6 @@
 // y.val = 20;
 // console.log(x.val); // 20 (non-primitive, reference copy)
 
-// hoisting
-// console.log("testing: ", testing);
-// var testing;
-// testing = 6;
-// console.log("testing: ", testing);
-
-// function outer() {
-//     let test;
-//     function inner() {
-//         test = 3;
-
-
-//         function core() {
-
-
-//             console.log("test: ", test);
-//             return test;
-//         }
-//         return core();
-//     }
-//     return inner();
-// }
-// console.log("outer(): ", outer());
 
 // Immediately Invoked Function Expression (IIFE)
 // (function () {
@@ -1023,20 +860,7 @@
 // const test = fullName.bind(name, 'KA', 'Mysore')
 // console.log('test: ', test);
 
-// call back fun
-// function greet(name, callback) {
-//   console.log("Hello, " + name + "!");
-//   callback();
-// }
 
-// function sayGoodbye() {
-//   console.log("Goodbye!");
-// }
-
-// greet("Alice", sayGoodbye);
-// // Output:
-// // Hello, Alice!
-// // Goodbye!
 
 
 // setTimeout(() => {
