@@ -187,13 +187,20 @@
 //   console.log("arg", arg1, arg2, ...arg);
 // }
 
-
+// callback fn
+// function greeting(callBack){
+//     console.log('inside greeting: ');
+//     callBack()
+// }
+// function name(){
+//     console.log('inside name: ');
+// }
+// greeting(name)
 
 // currying
 // function multiply(a,b){
 //     return a*b;
 //   }
-
 //   function currying(fn){
 //     return function(a){
 //       return function(b){
@@ -201,12 +208,27 @@
 //       }
 //     }
 //   }
-
 //   var curriedMultiply = currying(multiply);
-
 //   multiply(4, 3); // Returns 12
-
 //   curriedMultiply(4)(3); // Also returns 12
+
+
+// deep clone and shallow clone
+// Deep cloning means creating a completely independent copy of an object, including all nested objects or arrays. Changes to the clone do not affect the original.
+// const original = {
+//     name:{
+//         fn: 'Shalini',
+//         ln: 'M'
+//     },
+//     place: 'Mysore'
+// }
+// const deepClone = JSON.parse(JSON.stringify(original))
+// deepClone.place = 'BLR'
+// original.place = 'MYS'
+// const shallowClone = {...original}
+// console.log('original: ', original)
+// console.log('shallowClone: ', shallowClone);
+// console.log('deepClone: ', deepClone);
 
 
 // creating a promise
@@ -351,30 +373,6 @@
 
 // const receipent = Array.from(new Set([str1, str2,str3, str4, str5].filter(Boolean))).join(',')
 // console.log('receipent: ', receipent)
-
-// function add (a) {
-//     return function(b){
-//         console.log('a  b', a , b)
-//       return a + b;
-//     }
-//   }
-//   add(3)(4)
-
-// //   or
-
-//   function add (a) {
-//     function add1 (b){
-//        console.log('a  b', a , b)
-//      return a + b;
-//    }
-//    add1(4)
-//  }
-
-//  add(3)
-
-
-// =======================
-
 
 // configData = [
 //   {
@@ -547,7 +545,6 @@
 // }
 // time()
 
-// TTD shallowClone and deepClone (json.string) and json(pass)
 
 // //map flatMap  map([1][2][3]) flatMap([123])
 
@@ -596,65 +593,26 @@
 // let dates = new Date()
 // console.log('dates: ', dates.getSeconds())
 
-// function modifyVal(value) {
-//     value = 100;
-//    console.log(value);
-//    }
-    
-//    let num = 50;
-//    modifyVal(num);
-//    console.log(num);
-
 //    const str = "Hello World";
 // const uniqueChars = [...new Set([...str])];
 // console.log(uniqueChars);
 
-
-// deep clone
-// Deep cloning means creating a completely independent copy of an object, including all nested objects or arrays. Changes to the clone do not affect the original.
-// const original = {
-//   name: "Shalini",
-//   address: {
-//     city: "Bangalore",
-//     pin: 560001
-//   }
-// };
-
-// const deepClone = JSON.parse(JSON.stringify(original));
-
-// deepClone.address.city = "Mysore";
-
-
-// console.log("original:", original.address.city); // Bangalore
-// console.log("deepClone:", deepClone.address.city); // Mysore
-
-// testing()
-// function testing(){
-//   console.log('testing: ')
-// }
-
 // var stre = "Banglore, Mysore, Mandya";
- 
-// //  [
-// //  {name:'Banglore', value:'Banglore'},
-// //  {name:'Mysore', value:'Mysore'}, 
-// //  {name:'Mandya', value:'Mandya'}
-// //  ]
+//  [
+//  {name:'Banglore', value:'Banglore'},
+//  {name:'Mysore', value:'Mysore'}, 
+//  {name:'Mandya', value:'Mandya'}
+//  ]
 
+// stre = stre.split(',');
+// stre = stre.map((item) => {
+//   return {
+//     item: item,
+//     value: item
+//   }
+// });
+// console.log(stre); 
 
-// const result = stre.split(',').map(a=>({
-//   name: a,
-//   value: a
-// }))
-// console.log('testing: ', result)
-
-// ================================
-// // undefined and undeclared
-// console.log('testing: ', testing) //undefined
-// var testing
-// testing = 3
-
-// console.log('test: ', test) //undeclared
 
 // // primitive and non primitive
 // Primitive: Stored by value, immutable, compared by value.
@@ -683,20 +641,6 @@
 // let y = x;
 // y.val = 20;
 // console.log(x.val); // 20 (non-primitive, reference copy)
-
-
-
-
-
-// setTimeout(() => {
-//     console.log('3000: ')
-// }, 3000);
-
-// setInterval(() => {
-//     date = new Date()
-//     console.log('date: ', date)
-// }, 1000);
-
 
 // A WebSocket is a protocol that enables two-way, persistent communication between a client and a server
 // WebSockets allow real-time data transfer with less overhead.
@@ -733,18 +677,7 @@
 //             };
 //           }
 //         );
-// // ====================================  
-// var stre = "Banglore, Mysore, Mandya";
 
-// stre = stre.split(',');
-// stre = stre.map((item) => {
-//   return {
-//     item: item,
-//     value: item
-//   }
-// });
-// console.log(stre); 
-// // =====================================
 // paths= {1: '1-Prior to start-up', 2: '2-At first'}
 // updatePaths = Object.keys(paths).map((key) => {
 //           return {
@@ -765,58 +698,3 @@
 //         console.log('get', data);
 //       }
 //     });
-
-// ================
-// datatable filter in entire column
-// filterItems: function (tableData, query) {
-//       const lowerCaseQuery = query.toLowerCase()
-//       return tableData.filter(task => {
-//         return Object.values(task)
-//           .some(value => ('' + value).toLowerCase().includes(lowerCaseQuery))
-//       })
-//     }
-// datatable column based filter
-//  filterItems: function (arr, query) {
-//       return arr.filter((item) => {
-//         const matchValues = {
-//           sbName: (item.sbName || '').toLowerCase(),
-//           sbNumber: (item.sbNumber || '').toLowerCase(),
-//           status: (item.status || '').toLowerCase(),
-//           engineModel: (item.engineModel || '').toLowerCase()
-//         }
-//         return Object.keys(query).every((key) =>
-//           matchValues[key].includes((query[key] || '').toLowerCase())
-//         )
-//       })
-//     }
-// ================
-// const targetRoute = { name: 'communication', params: { comNum: processId } }
-//         const currentRoute = router
-//         if (
-//           currentRoute.name !== targetRoute.name ||
-//           currentRoute.params.comNum !== targetRoute.params.comNum
-//         ) {
-//           router.push(targetRoute)
-//         }
-// =========================
-// function modifyVal(value) {
-//  value = 100;
-// console.log(value);
-// }
- 
-// let num = 50;
-// modifyVal(num);
-// console.log(num);
-
-// const str = "Hello World";
-// const uniqueChars = [...new Set([...str])];
-// console.log(uniqueChars);
-// =====================
-// const targetRoute = { name: 'communication', params: { comNum: processId } }
-//         const currentRoute = router
-//         if (
-//           currentRoute.name !== targetRoute.name ||
-//           currentRoute.params.comNum !== targetRoute.params.comNum
-//         ) {
-//           router.push(targetRoute)
-//         }
