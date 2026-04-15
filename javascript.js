@@ -229,7 +229,87 @@
 // console.log('original: ', original)
 // console.log('shallowClone: ', shallowClone);
 // console.log('deepClone: ', deepClone);
+// arrow fn
+// const test  = () => {
+//     console.log('inside arrow fn');
+// }
+// test()
 
+// event delegation
+// const test = document.getElementById('list')
+// test.addEventListener('click', function(event){
+//         ///
+// })
+
+// setTimeout, setInterval, setImmediate
+
+// console.log('start');
+
+// (function testing() {
+// console.log('inside testing')
+// })()
+
+// setTimeout(()=>{
+// console.log('inside setTimeout after 5sec');
+// }, 5000)
+
+// console.log('end');
+
+
+// setInterval(()=>{
+//     const currentTime = new Date
+//     console.log('currentTime: ', currentTime.getMinutes(), currentTime.getSeconds())
+// }, 1000)
+
+// const immediateObj = setImmediate((arg) => {
+//   console.log(`Executing immediate with: ${arg}`);
+// }, 'Hello World');
+
+
+// debouncing
+// limit the rate of the api call
+
+// function debounce(func, delay) {
+//     console.log('debounce: ')
+//     let timeoutId;
+
+//     return function(...args) {
+//         clearTimeout(timeoutId);
+//         timeoutId = setTimeout(() => {
+//             console.log('timeoutId: ', timeoutId)
+//             func.apply(this, args);
+//         }, delay);
+//     };
+// }
+// function apiCall() {
+//     console.log('API called');
+// }
+// const debouncedApiCall = debounce(apiCall, 2000);
+
+
+// throttling
+
+// function throttle(func, delay) {
+//   let isThrottled = false;
+//   return function(...args) {
+//     if (!isThrottled) {
+//       func.apply(this, args);
+//       isThrottled = true;
+//       setTimeout(() => {
+//         isThrottled = false, delay
+//     });
+//     }
+//   };
+// }
+
+// function logScroll() {
+//     console.log('Scrolled');
+// }
+
+// const throttledScroll = throttle(logScroll, 1000);
+
+// Example usage: Throttled scroll event listener
+// window.addEventListener('scroll', throttledScroll);
 
 // creating a promise
 
@@ -305,74 +385,30 @@
 // }
 // getData()
 
-// debouncing
-// limit the rate of the api call
+// import { Observable } from 'rxjs';
+// // An Observable represents a stream of values
+// const myObservable = new Observable(subscriber => {
+//   console.log("Observable started..."); // Executes only when subscribed
+//   let count = 0;
+//   const id = setInterval(() => {
+//     subscriber.next(`Value ${++count}`); // Emits multiple times
+//     if (count === 3) {
+//       subscriber.complete();
+//       clearInterval(id);
+//     }
+//   }, 1000);
+// });
 
-// function debounce(func, delay) {
-//     console.log('debounce: ')
-//     let timeoutId;
+// // Consuming the observable
+// const subscription = myObservable.subscribe(val => console.log(val))
+// console.log('subscription: ', subscription)
 
-//     return function() {
-//         const context = this;
-//         const args = arguments;
+// "use strict"
+// var x
+// x= 34
+// console.log('x: ', x)
 
-//         clearTimeout(timeoutId);
-//         timeoutId = setTimeout(() => {
-//             console.log('timeoutId: ', timeoutId)
-//             func.apply(context, args);
-//         }, delay);
-//     };
-// }
 
-// function apiCall() {
-//     console.log('API called');
-// }
-
-// const debouncedApiCall = debounce(apiCall, 2000);
-
-// throttling
-// function throttle(func, delay) {
-//     let lastExecTime = 0;
-//     let timeoutId;
-
-//     return function() {
-//         const context = this;
-//         const args = arguments;
-//         const currentTime = new Date().getTime();
-
-//         if (currentTime - lastExecTime < delay) {
-//             // Delay has not passed since last execution, throttle the function call
-//             clearTimeout(timeoutId);
-//             timeoutId = setTimeout(() => {
-//                 lastExecTime = currentTime;
-//                 func.apply(context, args);
-//             }, delay);
-//         } else {
-//             // Delay has passed, execute the function immediately
-//             lastExecTime = currentTime;
-//             func.apply(context, args);
-//         }
-//     };
-// }
-
-// function logScroll() {
-//     console.log('Scrolled');
-// }
-
-// const throttledScroll = throttle(logScroll, 2000);
-
-// Example usage: Throttled scroll event listener
-// window.addEventListener('scroll', throttledScroll);
-
-// remove duplicate using array from set and filter for the '' and null remove and join for the array to string
-// const str1= 'testing1'
-// const str2= 'testing2'
-// const str3= ''
-// const str4= null
-// const str5= 'testing2'
-
-// const receipent = Array.from(new Set([str1, str2,str3, str4, str5].filter(Boolean))).join(',')
-// console.log('receipent: ', receipent)
 
 // configData = [
 //   {
@@ -537,14 +573,6 @@
 // }
 // console.log('reversName(string): ', reversName('shalini'));
 
-// function time(){
-//     setInterval(()=>{
-//         var currentTime = new Date()
-//         console.log('currentTime: ', currentTime)
-//     }, 1000)
-// }
-// time()
-
 
 // //map flatMap  map([1][2][3]) flatMap([123])
 
@@ -677,15 +705,6 @@
 //             };
 //           }
 //         );
-
-// paths= {1: '1-Prior to start-up', 2: '2-At first'}
-// updatePaths = Object.keys(paths).map((key) => {
-//           return {
-//             access: paths[key].split(','),
-//             resources: key
-//           }
-//         });
-		
 // =====================================	
 // this.globalService.jwtToken$.next(jwtToken);
 

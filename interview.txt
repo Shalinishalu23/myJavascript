@@ -103,6 +103,7 @@ angular
 	cancatemap, mergemap, exhaustmap
 	ngrs
 	rxjs(observals,replaysubject,subject)
+	forkJoin will wait for all passed observables to emit and complete and then it will emit an array or an object with last values from corresponding observables.
 	error codes
 	behaviour subject- RxJS has observers (consuming interface) and observables (push interface)-can emit the current value 
 	Subject and Behavior Subject
@@ -184,51 +185,41 @@ JS
 	memoization -a performance optimization technique in JavaScript that speeds up applications by caching the results of expensive function calls and returning the cached result when the same inputs occur again
 	callbacks- A callback is a function that will be executed after another function gets executed.
 	currying -if we have a function f(a,b) , then the function after currying, will be transformed to f(a)(b).
-	event propagation- process of how events (like clicks) travel through the Document Object Model (DOM) tree to target elements and their ancestors
 	What are Deep Clone an Object (without JSON.stringify) , shallow clone, JSON.parse(JSON.stringify(original)) 
-
-
-
 	What are ES6 concepts in JavaScript? 		
-	es5 vs es6  
-	event capturing, event bubbling, event delegation 
-	SetTimeout and setIntervals, setImmediate
-	Primitive(string int bigint boolean and passed by value ) and non primitive(obj passed by reference)
-	promise => is an object representing eventual completion or failure of the async operation
-	promise vs observables
-	Create a Promise.all
-	promises, async await
-	Implement sleep(ms) using Promises
-	asynchronous behavior
-	debouncing - if keystroke b/w words 300s time
-	throttling - call api b/w every 300s time
-	polyfill
+	const, let ,arrow fn, spread/rest,destructing , promise
+	event propagation- process of how events (like clicks) travel through the Document Object Model (DOM) tree to target elements and their ancestors
+	event delegation- is a technique that uses this propagation to handle events on multiple child elements with a single listener on a parent element.
 	event bubbling and capturing:With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
     With capturing, the event is first captured by the outermost element and propagated to the inner elements.Capturing is also called "trickling",
-	forkJoin will wait for all passed observables to emit and complete and then it will emit an array or an object with last values from corresponding observables.
+	SetTimeout and setIntervals, setImmediate
+	debouncing - if keystroke b/w words 300s time
+	throttling - call api b/w every 300s time
+	Primitive(string int bigint boolean and passed by value ) and non primitive(obj passed by reference)
+	promises, async await => is an object representing eventual completion or failure of the async operation
+	promise vs observables
+	Sequential vs Parallel Promise Execution() (Promise.all(promises)) or Limit Concurrent Promises (Concurrency Control)
+	use strict
+	asynchronous behavior- allows a program to start a long-running task—such as API calls or timers—without freezing the main execution thread, enabling non-blocking, responsive performance
 	slice(modify shallow array),splice(modify original array)
+	polyfill- is a piece of code (typically JavaScript) used to provide modern functionality to older browsers or environments that do not natively support those features
 	prototype chaining and advantage 
+	window and document object in javascript-- settimeout,console, alert,date, history location
+
+	
 	Inheritance the properties and the methods , we can change the behaviour of it
 	advantage it is only stored in the memory once, but every instance of the object has access to it	
-	window and document object in javascript
-	What is Gulp and Grunt
-	gulp and Grunt are task runners. They are different approaches to same problem. Grunt uses configuration based approach, 
-	while gulp uses streams from node to achieve result. You use them to define how and which tasks to execute 
 	(copying files, adding banners, replacing text, style checking, etc...)
-	Tuple can contain two values of different data types.
-	[1, "Steve"];
-	Custom Promise Implementation (Basic)
-	Limit Concurrent Promises (Concurrency Control)
-	Sequential vs Parallel Promise Execution
+	Tuple can contain two values of different data types-[1, "Steve"];
 	Retry a Failed Request with Delay
 	Flatten a Nested Array/Object
 	Chained Sum Function (e.g., sum(1)(2)(3)() returns 6)
-	Event Delegation Implementation
-	use strict
 	duplication remove in array n object
 	return same object in 2 array
 	Find the second largest number in array. 
 	Find the largest palindrome in a string. 
+	gulp and Grunt are task runners. They are different approaches to same problem. Grunt uses configuration based approach, 
+	while gulp uses streams from node to achieve result. You use them to define how and which tasks to execute 
 
 HTML
     semantic and non semantic
