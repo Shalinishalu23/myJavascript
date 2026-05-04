@@ -24,26 +24,25 @@ angular
 	Angular architecture(Modules,component,service,dependency Injector, template,metadata,directive,data binding)
 	angular.json-  configurations of the app
 	tsconfig -complier option 
-	IVY compiler aot
-    differential loading v7 to v8+ Differential loading lets you serve up different bundles to different browsers and make your application even faster
     navigator in JS
-	Life cycle
+	angular user idle
 	Angular compilers
-	angular user idel
+	IVY compiler aot-Smaller Bundle Sizes,Faster Compilation
+    differential loading v7 to v8+ lets you serve up different bundles to different browsers and make your application even faster
+	Compilation-In JIT compilation, the application compiles inside the browser during runtime.
+	Whereas in the AOT compilation, the application compiles during the build time.
+	server-side called Angular Universal,
+	Life cycle
 	ngOnChanges: Is called, when an input/output binding value changes.
 	ngOnInit is a life cycle hook called by Angular to indicate that Angular is done creating the component.
-	ngOnInit: Is called after the first ngOnChanges.
 	ngDoCheck: Is called, if we as developer triggered a custom change detection.
 	ngAfterContentInit: Is called after the content of a component is initialized.
 	ngAfterContentChecked: Is called after every check of the component’s content.
 	ngAfterViewInit: Is called after a component’s views are initialized.
 	ngAfterViewChecked: Is called after every check of a component’s views.
 	ngOnDestroy: Is called just before the directive is destroyed.
-	Compilation-In JIT compilation, the application compiles inside the browser during runtime.Whereas in the AOT compilation, the application compiles during the build time.
 	Data-binding-one-way(interpolation{{}},propery binding[],event bindin(click()) and two-way binding[(ngModel)]=''.)
-	Promise((resolve, reject)then asyn and await asynchronous)
-	Directive(ACS)(Component--selector,decorator,template/ Structural-*ngIf and *ngFor / Attribute- ng class , ng style)
-	server-side called Angular Universal,
+	Directive(ACS)(Attribute- ng class , ng style, ng model/ Component--selector,decorator,template/ Structural-*ngIf and *ngFor)
 	share data between components -- @Input,@Output() backBoolean = new EventEmitter(); , emit,  @ViewChild(ChildComponent,{static:false}) child; service,BehaviorSubject
     @ViewChild('tt') in html(to access template element with eleRef)
 	Dependency Injection(creating service and inject in to component and have dependency in component)
@@ -52,7 +51,6 @@ angular
 	| async to get latest value		
 	Lazy loading	
     ng g m home --route home --module app.module
-	What are @HostBinding and @HostListener?	
 	@HostBinding - will bind the property to the host element, If a binding changes, HostBinding will update the host element.(CSS and validation related thing)
 	@HostListener - will listen to the event emitted by the host element that's declared with @HostListener.(pipes)
 	ViewEncapsulation: emulate(default),none,shadow dom/Component CSS styles are encapsulated into the component’s view to avoid styling side effects in the rest of the Ang app
@@ -61,7 +59,6 @@ angular
     https HttpClient,get post put delete
 	canactivate=> Interface that a class can implement to be a guard deciding if a route can be activated. If all guards return true , navigation continues 
 	Route Gaurds, custom route gaurds and why to use
-	https://www.digitalocean.com/community/tutorials/angular-route-guards
 	The Angular router’s navigation guards allow to grant or remove access to certain parts of the navigation.
 	the CanDeactivate guard, even allows you to prevent a user from accidentally leaving a component with unsaved changes.
 	Routing = Routes and Paths (redirectTo /pathMatch)	
@@ -223,13 +220,12 @@ JS
 
 HTML
     semantic and non semantic
-	dispaly:none and visibility: hidden
+	dispaly:none(no space) and visibility: hidden(space)
 
 CSS 
 	SCSS
 	Library
 	tailwind
-	select (p1,h4)
 	select (p1,h4)
 	background-color
 	color
@@ -247,8 +243,6 @@ CSS
 	  margin: 0;
 	}
 	outline offset
-	text
-	display:none(no space)/visibility:hidden(space) block inline
 	position-static relative fixed absolute sticky
 	z-index -behind the text
 	overflow-visible hidden scroll none
@@ -291,21 +285,22 @@ CSS
 	cell spacing and cell padding
 	<span style:"display:block"> for inline element add dispaly :block first and later add other style
 	What are pseudo elements and pseudo classes? 
-	CSS specificity(priority) - Inline styles,IDs,Classes, attributes and pseudo-classes,Elements and pseudo-elements
 	HTML meta tag - meta charset="UTF-8" and many more 
-	cell spacing and cell padding
-	<span style:"display:block"> for inline element add dispaly :block first and later add other style
 	What is CSS Specificity? 
 	Inline styles - Example: <h1 style="color: pink;">
 	IDs - Example: #navbar
 	Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
 	Elements and pseudo-elements - Example: h1, :before
 	Difference between div and span tags? 
-	Why we use semantic elements? 
 	What are meta tags? 
 	responsive (media query)
-	css box model
 	css positions
+
+	React
+
+	HMR- hot module replacement
+
+	
 
 	
 	What are different build Tools(Docker)

@@ -311,6 +311,29 @@
 // Example usage: Throttled scroll event listener
 // window.addEventListener('scroll', throttledScroll);
 
+
+// pass by value
+// function call(num){
+//     num = 50
+// }
+
+// var test1 = 100
+// call(test1)
+// console.log('test1: ', test1);
+
+// pass by reference
+// function reference(ref){
+// ref.name = 'Gowda'
+// }
+
+// var refe = {
+//     name : 'Shalini'
+// }
+
+// reference(refe)
+// console.log('refe: ', refe)
+
+
 // creating a promise
 
 // function promiseCreation(name){
@@ -408,6 +431,109 @@
 // x= 34
 // console.log('x: ', x)
 
+
+// var array = [[1,2,3],[4,5,6],[7,8,9]]
+// console.log('array.reverse(): ', array.reverse());
+
+// let array1 = []
+// let array2 = []
+// let array3 = []
+// array.forEach((element, ind) => {
+//     element.forEach((item, index) => {
+//         if(index === 0)        array1.push(item)
+//             if(index === 1)        array2.push(item)
+//                 if(index === 2)        array3.push(item)
+                    
+//                 });
+                
+//             });
+//             console.log('array1: ', array1);
+//             console.log('array2: ', array2);
+//             console.log('array3: ', array3);
+
+// var str = 'banana'  // B-Aa-Nnn-Aaaa-Naaaa-Aaaaaa
+// console.log('string: ', string.split(''))
+// let str = ''
+// string.split('').map((item, index)=>{
+//    str = str + item.toUpperCase()+ item.toLowerCase().repeat(index)  + '-'
+// })
+// console.log('str: ', str);
+// function repeat(str){
+// let test = ' '
+// for(let i=0; i< str.length; i++)
+//     {
+//     test = test + str[i].toUpperCase()+ str[i].toLowerCase().repeat(i)  + '-'
+    
+// }
+// console.log('test: ', test);
+// let count = 0
+// const test = setInterval(() => {
+//     console.log('Hello world');
+//     count++
+//     if(count=== 5){
+//         clearInterval(test)
+//     }
+// }, 1000);
+
+// function isPolindrome(str){
+//     console.log('str ',str ===  str.split('').reverse().join(''));
+// }
+
+// isPolindrome('123454321')
+
+
+// const obj= [1,2,4,5] // deep clone
+
+// let x = []
+// function pushNum(newIndex, value, arr){
+//     arr.forEach((item, ind) => {
+//         if(ind === newIndex){ // 2
+//             x.push(value)
+//         }
+//         x.push(item)
+//     });
+//     // arr.splice(newIndex, 0,value)
+//     return x
+// }
+
+//  console.log('pushNum(4, 3): ', pushNum(2, 3, obj)); // [1,2,3,4,5]
+
+// find min and max
+// arr =[5,8,9,6]
+// let max = arr[0]
+// let min = arr[0]
+//  for(let i=0; i < arr.length; i++){
+//     if(arr[i] > max){
+//         max = arr[i]
+//     }
+//     if(arr[i] < min){
+//         min = arr[i]
+//     }
+// }
+// console.log('min: ', min);
+// console.log('max: ', max);        
+
+
+// good pair
+ 
+// function FindGoodPair(A, B) {
+//   let numbers = 0;
+//   for (let i = 0; i < A.length; i++) {
+//     for (let j = i + 1; j < A.length; j++) {
+//       if (A[i] + A[j] === B) {
+//         numbers = 1;
+//       }
+//     }
+//   }
+//   return numbers;
+// }
+// const A = [1, 2, 3, 4];
+// // const A = [1,2,4]
+// // const A = [1,2,3,4]
+ 
+// const B1 = 4;
+// console.log(FindGoodPair(A, B1));
+ 
 
 
 // configData = [

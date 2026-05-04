@@ -3,7 +3,6 @@
   <head>
     <title>Page Title</title>
     <script src="javascript.js"></script>
-    <!-- <script src="javascript.js"></script> -->
     <!-- <script src="leetCode.js"></script> -->
     <!-- <script src="map.js"></script> -->
     <!-- <script src="algo.js"></script> -->
@@ -17,11 +16,48 @@
     <!-- <script src="linkedList.js"></script> -->
     <!-- <script src="doublyLinkedList.js"></script> -->
     <!-- <script src="freeCodeCamp.js"></script> -->
+    <!-- <script src="pubSub.js"></script> -->
   </head>
 
   <body>
+    
     <h1>Shalini</h1>
-    <input type="text" onkeyup="debouncedApiCall()" />
+    <!-- <input type="text" onkeyup="debouncedApiCall()" />
     <input type="text" onkeyup="throttledScroll()" />
+    <div class="container">
+      <div class="box"> box 1</div>
+      <div class="box"> box 2</div>
+      <div class="box"> box 3</div>
+      <div class="box"> box 4</div>
+    </div> -->
   </body>
 </html>
+<style>
+.container {
+  display: grid;
+  padding: 10px;
+  gap: 20px;
+}
+
+.box {
+    background-color: #3498db;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+@media (min-width: 600px){
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+.container
+{
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+</style>
